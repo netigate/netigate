@@ -1,0 +1,15 @@
+.sidebar-boxed.sidebar-dark {
+    background-color: #999;
+}
+
+.banner.auto-size {
+	background-color:#fff;
+}
+
+.li {
+	color: #fff;
+}
+
+#li.active {
+	background-color:#2c3e50;
+}
