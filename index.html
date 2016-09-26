@@ -132,7 +132,7 @@
 
                     <!-- ListSurveys -->
                     <section id="sect-ListSurveys">
-                        <h4 id="subsec-listsurveys">Listing surveys</h4>
+                        <h4 id="subsec-listsurveys">Listing Surveys</h4>
                         <p>List all Surveys in an account.</p>
 
                         <br/>
@@ -217,7 +217,7 @@
 
                     <!-- GetSurvey -->
                     <section id="sec-GetSurvey">
-                        <h4 id="subsec-getsurvey">Retrieving a survey</h4>
+                        <h4 id="subsec-getsurvey">Retrieving a Survey</h4>
                         <p>Retrieve a specific Survey.</p>
 
                         <br/>
@@ -291,7 +291,7 @@
 
                     <!-- ListQuestions -->
                     <section id="sect-ListQuestions">
-                        <h4 id="subsec-listquestions">Listing questions</h4>
+                        <h4 id="subsec-listquestions">Listing Questions</h4>
                         <p>Retrieve the Question tree from a survey.</p>
 
                         <br />
@@ -583,9 +583,9 @@
                 <section>
                     <h2 id="answers">Answers</h2>
 
-                    <!-- ListAnswers -->
-                    <section id="sect-ListAnswers">
-                        <h4 id="subsec-ListAnswers">Listing answers</h4>
+                    <!-- ListAnswerSets -->
+                    <section id="sect-ListAnswerSets">
+                        <h4 id="subsec-ListAnswerSets">Listing AnswerSets</h4>
                         <p>List all AnswerSets in a survey.</p>
 
                         <br />
@@ -595,20 +595,20 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#req-ListAnswers" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                    <a href="#req-ListAnswerSets" aria-controls="home" role="tab" data-toggle="tab">Request</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#desc-req-ListAnswers" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                    <a href="#desc-req-ListAnswerSets" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="req-ListAnswers">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListAnswerSets">
                                     <pre class="line-numbers"><code>GET /surveys/&lt;surveyId&gt;/answers</code></pre>
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane" id="desc-req-ListAnswers">
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListAnswerSets">
                                     <pre class="line-numbers"><code>No description.</code></pre>
                                 </div>
                             </div>
@@ -619,16 +619,16 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#resp-ListAnswers" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                    <a href="#resp-ListAnswerSets" aria-controls="home" role="tab" data-toggle="tab">Response</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#desc-resp-ListAnswers" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                    <a href="#desc-resp-ListAnswerSets" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="resp-ListAnswers">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListAnswerSets">
                                     <pre class="line-numbers"><code class="language-json">
 [
     {
@@ -649,13 +649,188 @@
 			                        </code></pre>
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListAnswers">
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListAnswerSets">
                                     <pre class="line-numbers"><code>No description.</code></pre>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <!-- END ListQuestions -->
+                    <!-- END ListAnswerSets -->
+
+                    <hr/>
+
+                    <!-- GetAnswerSet -->
+                    <section id="sect-GetAnswerSet">
+                        <h4 id="subsec-GetAnswerSet">Retrieving an AnswerSet</h4>
+                        <p>Retrieve a specific AnswerSet.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-GetAnswerSet" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-GetAnswerSet" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-GetAnswerSet">
+                                    <pre class="line-numbers"><code>GET /surveys/&lt;surveyId&gt;/answers/&lt;answerSetId&gt;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-GetAnswerSet">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-GetAnswerSet" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-GetAnswerSet" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-GetAnswerSet">
+                                    <pre class="line-numbers"><code class="language-json">
+{
+    "AnswerSetId":2147483647,
+    "Respondent":2147483647,
+    "Created":"2016-09-09T12:02:37Z",
+    "Completed":"2016-09-09T12:05:54Z",
+    "Answers":[
+        {
+            "AnswerId":2147483647,
+            "Created":"2016-09-09T12:02:57Z",
+            "AnswerSet":2147483647,
+            "QuestionItem":2147483647,
+            "QuestionType":"String content",
+            "QuestionText":"String content",
+            "AnswerText":"String content",
+            "AnswerNumeric":2147483647
+            "AnswerWeight":2147483647
+        }, 
+        {
+            "AnswerId":2147483647,
+            "Created":"2016-09-09T12:03:28Z",
+            "AnswerSet":2147483647,
+            "QuestionItem":2147483647,
+            "QuestionType":"String content",
+            "QuestionText":"String content",
+            "AnswerText":"String content",
+            "AnswerNumeric":2147483647
+            "AnswerWeight":2147483647
+        }
+    ]
+}
+			                        </code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-GetAnswerSet">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END GetAnswerSet -->
+
+                    <hr />
+
+                    <!-- GetAnswer -->
+                    <section id="sect-GetAnswer">
+                        <h4 id="subsec-GetAnswer">Retrieving an Answer</h4>
+                        <p>Retrieve a respondent's answers for a specific question.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-GetAnswer" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-GetAnswer" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-GetAnswer">
+                                    <pre class="line-numbers"><code>GET /surveys/&lt;surveyId&gt;/answers/&lt;answerSetId&gt;/&lt;questionItemId&gt;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-GetAnswer">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-GetAnswer" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-GetAnswer" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-GetAnswer">
+                                    <pre class="line-numbers"><code class="language-json">
+[
+    {
+        "AnswerId":2147483647,
+        "Created":"2016-09-09T12:03:28Z",
+        "AnswerSet":2147483647,
+        "QuestionItem":2147483647,
+        "QuestionType":"String content",
+        "QuestionText":"String content",
+        "AnswerText":"String content",
+        "AnswerNumeric":2147483647
+        "AnswerWeight":2147483647
+    }, 
+    {
+        "AnswerId":2147483647,
+        "Created":"2016-09-09T12:03:38Z",
+        "AnswerSet":2147483647,
+        "QuestionItem":2147483647,
+        "QuestionType":"String content",
+        "QuestionText":"String content",
+        "AnswerText":"String content",
+        "AnswerNumeric":2147483647
+        "AnswerWeight":2147483647
+    }, 
+]
+			                        </code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-GetAnswer">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END GetAnswer -->
+
                 </section>
                 <!-- END Answers -->
 
