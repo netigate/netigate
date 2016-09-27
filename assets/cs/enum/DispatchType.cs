@@ -1,4 +1,4 @@
-﻿public enum DispatchType
+﻿enum DispatchType
 {
     EMAIL = 1,
     SMS = 2

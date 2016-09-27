@@ -1,4 +1,4 @@
-﻿public enum LabelType
+﻿enum LabelType
 {
     TEXT = 1,
     ORDINAL = 3

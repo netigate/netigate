@@ -1,4 +1,4 @@
-﻿public enum SendoutLogic
+﻿enum SendoutLogic
 {
     ALL = 1,
     NOT_SENT = 2,
