@@ -30,15 +30,67 @@
 
             <a class="sidebar-brand" href="index.html"><img src="assets/img/logo-sidebar.png" alt="logo"></a>
 
-            <ul class="nav sidenav dropable">
+            <ul class="nav sidenav dropable sticky">
                 <li><a href="#intro">Intro</a></li>
                 <li><a href="#auth">Authentication</a></li>
-                <li><a href="#surveys">Surveys</a></li>
-                <li><a href="#questions">Questions</a></li>
-                <li><a href="#answers">Answers</a></li>
-                <li><a href="#sendouts">Sendouts</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#users">Users</a></li>
+                <li>
+                    <a href="#surveys">Surveys</a>
+                    <ul>
+                        <li><a href="#ssec-ListSurveys">List Surveys</a></li>
+                        <li><a href="#ssec-GetSurvey">Retrieve Survey</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#questions">Questions</a>
+                    <ul>
+                        <li><a href="#ssec-ListQuestions">List Questions</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#answers">Answers</a>
+                    <ul>
+                        <li><a href="#ssec-ListAnswerSets">List AnswerSets</a></li>
+                        <li><a href="#ssec-GetAnswerSet">Retrieve AnswerSet</a></li>
+                        <li><a href="#ssec-GetAnswer">Retrieve Answer</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#sendouts">Sendouts</a>
+                    <ul>
+                        <li><a href="#ssec-ListSendouts">List Sendouts</a></li>
+                        <li><a href="#ssec-GetSendout">Retrieve Sendout</a></li>
+                        <li><a href="#ssec-CreateSendout">Create Sendout</a></li>
+                        <li><a href="#ssec-ActivateSendout">Activate Sendout</a></li>
+                        <li><a href="#ssec-ListRespondents">List Respondents</a></li>
+                        <li><a href="#ssec-AddRespondent">Add Respondent</a></li>
+                        <li><a href="#ssec-ListReminders">List Reminders</a></li>
+                        <li><a href="#ssec-CreateReminder">Create Reminder</a></li>
+                        <li><a href="#ssec-ListBackgroundLabels">List Background Labels</a></li>
+                        <li><a href="#ssec-CreateBackgroundLabel">Create Background Label</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#categories">Categories</a>
+                    <ul>
+                        <li><a href="#ssec-ListCategories">List Categories</a></li>
+                        <li><a href="#ssec-GetCategory">Retrieve Category</a></li>
+                        <li><a href="#ssec-CreateCategory">Create Category</a></li>
+                        <li><a href="#ssec-UpdateCategory">Update Category</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#users">Users</a>
+                    <ul>
+                        <li><a href="#ssec-ListUsers">List Users</a></li>
+                        <li><a href="#ssec-GetUser">Retrieve User</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#misc">Misc</a>
+                    <ul>
+                        <li><a href="#ssec-ListBlocks">Blocklist</a></li>
+                    </ul>
+                </li>
             </ul>
 
         </aside>
@@ -131,8 +183,8 @@
                     <h2 id="surveys">Surveys</h2>
 
                     <!-- ListSurveys -->
-                    <section id="sect-ListSurveys">
-                        <h4 id="subsec-listsurveys">Listing Surveys</h4>
+                    <section id="sec-ListSurveys">
+                        <h4 id="ssec-ListSurveys">Listing Surveys</h4>
                         <p>List all Surveys in an account.</p>
 
                         <br/>
@@ -142,20 +194,20 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#req-listsurveys" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                    <a href="#req-ListSurveys" aria-controls="home" role="tab" data-toggle="tab">Request</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#desc-req-listsurveys" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                    <a href="#desc-req-ListSurveys" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="req-listsurveys">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListSurveys">
                                     <pre class="line-numbers"><code class="ntg-http-request">GET /surveys</code></pre>
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane" id="desc-req-listsurveys">
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListSurveys">
                                     <pre class="line-numbers"><code>No description.</code></pre>
                                 </div>
                             </div>
@@ -166,16 +218,16 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#resp-listsurveys" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                    <a href="#resp-ListSurveys" aria-controls="home" role="tab" data-toggle="tab">Response</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#desc-resp-listsurveys" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                    <a href="#desc-resp-ListSurveys" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="resp-listsurveys">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListSurveys">
                                     <pre class="line-numbers"><code class="language-json">
 [
     {
@@ -205,7 +257,7 @@
 			</code></pre>
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane" id="desc-resp-listsurveys">
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListSurveys">
                                     <pre class="line-numbers"><code>No description.</code></pre>
                                 </div>
                             </div>
@@ -217,7 +269,7 @@
 
                     <!-- GetSurvey -->
                     <section id="sec-GetSurvey">
-                        <h4 id="subsec-getsurvey">Retrieving a Survey</h4>
+                        <h4 id="ssec-GetSurvey">Retrieving a Survey</h4>
                         <p>Retrieve a specific Survey.</p>
 
                         <br/>
@@ -227,20 +279,20 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#req-getsurvey" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                    <a href="#req-GetSurvey" aria-controls="home" role="tab" data-toggle="tab">Request</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#desc-req-getsurvey" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                    <a href="#desc-req-GetSurvey" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="req-getsurvey">
+                                <div role="tabpanel" class="tab-pane active in" id="req-GetSurvey">
                                     <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;</code></pre>
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane" id="desc-req-getsurvey">
+                                <div role="tabpanel" class="tab-pane" id="desc-req-GetSurvey">
                                     <pre class="line-numbers"><code>No description.</code></pre>
                                 </div>
                             </div>
@@ -251,16 +303,16 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#resp-getsurvey" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                    <a href="#resp-GetSurvey" aria-controls="home" role="tab" data-toggle="tab">Response</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#desc-resp-getsurvey" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                    <a href="#desc-resp-GetSurvey" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="resp-getsurvey">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-GetSurvey">
                                     <pre class="line-numbers"><code class="language-json">
 {
     "SurveyId":"12345", 
@@ -273,7 +325,7 @@
 			</code></pre>
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane" id="desc-resp-getsurvey">
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-GetSurvey">
                                     <pre class="line-numbers"><code>No description.</code></pre>
                                 </div>
                             </div>
@@ -290,8 +342,8 @@
                     <h2 id="questions">Questions</h2>
 
                     <!-- ListQuestions -->
-                    <section id="sect-ListQuestions">
-                        <h4 id="subsec-listquestions">Listing Questions</h4>
+                    <section id="sec-ListQuestions">
+                        <h4 id="ssec-ListQuestions">Listing Questions</h4>
                         <p>Retrieve the Question tree from a survey.</p>
 
                         <br />
@@ -301,20 +353,20 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#req-listquestions" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                    <a href="#req-ListQuestions" aria-controls="home" role="tab" data-toggle="tab">Request</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#desc-req-listquestions" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                    <a href="#desc-req-ListQuestions" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="req-listquestions">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListQuestions">
                                     <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/questions</code></pre>
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane" id="desc-req-listquestions">
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListQuestions">
                                     <pre class="line-numbers"><code>No description.</code></pre>
                                 </div>
                             </div>
@@ -325,16 +377,16 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#resp-listquestions" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                    <a href="#resp-ListQuestions" aria-controls="home" role="tab" data-toggle="tab">Response</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#desc-resp-listquestions" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                    <a href="#desc-resp-ListQuestions" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="resp-listquestions">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListQuestions">
                                     <pre class="line-numbers"><code class="language-json">
 [
     {
@@ -568,7 +620,7 @@
 			                        </code></pre>
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane" id="desc-resp-listquestions">
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListQuestions">
                                     <pre class="line-numbers"><code>No description.</code></pre>
                                 </div>
                             </div>
@@ -584,8 +636,8 @@
                     <h2 id="answers">Answers</h2>
 
                     <!-- ListAnswerSets -->
-                    <section id="sect-ListAnswerSets">
-                        <h4 id="subsec-ListAnswerSets">Listing AnswerSets</h4>
+                    <section id="sec-ListAnswerSets">
+                        <h4 id="ssec-ListAnswerSets">Listing AnswerSets</h4>
                         <p>List all AnswerSets in a survey.</p>
 
                         <br />
@@ -660,8 +712,8 @@
                     <hr/>
 
                     <!-- GetAnswerSet -->
-                    <section id="sect-GetAnswerSet">
-                        <h4 id="subsec-GetAnswerSet">Retrieving an AnswerSet</h4>
+                    <section id="sec-GetAnswerSet">
+                        <h4 id="ssec-GetAnswerSet">Retrieving an AnswerSet</h4>
                         <p>Retrieve a specific AnswerSet.</p>
 
                         <br />
@@ -750,8 +802,8 @@
                     <hr />
 
                     <!-- GetAnswer -->
-                    <section id="sect-GetAnswer">
-                        <h4 id="subsec-GetAnswer">Retrieving an Answer</h4>
+                    <section id="sec-GetAnswer">
+                        <h4 id="ssec-GetAnswer">Retrieving an Answer</h4>
                         <p>Retrieve a respondent's answers for a specific question.</p>
 
                         <br />
@@ -840,8 +892,8 @@
                     <h2 id="sendouts">Sendouts</h2>
 
                     <!-- ListSendouts -->
-                    <section id="sect-ListSendouts">
-                        <h4 id="subsec-ListSendouts">Listing Sendouts</h4>
+                    <section id="sec-ListSendouts">
+                        <h4 id="ssec-ListSendouts">Listing Sendouts</h4>
                         <p>List all Sendouts for a Survey.</p>
 
                         <br />
@@ -926,8 +978,8 @@
                     <hr/>
 
                     <!-- GetSendout -->
-                    <section id="sect-GetSendout">
-                        <h4 id="subsec-GetSendout">Retrieving a Sendout</h4>
+                    <section id="sec-GetSendout">
+                        <h4 id="ssec-GetSendout">Retrieving a Sendout</h4>
                         <p>Retrieve a specific sendout for a survey.</p>
 
                         <br />
@@ -1023,8 +1075,8 @@
                     <hr/>
 
                     <!-- CreateSendout -->
-                    <section id="sect-CreateSendout">
-                        <h4 id="subsec-CreateSendout">Creating a Sendout</h4>
+                    <section id="sec-CreateSendout">
+                        <h4 id="ssec-CreateSendout">Creating a Sendout</h4>
                         <p>Create a new Sendout for a Survey.</p>
 
                         <br />
@@ -1133,8 +1185,8 @@
                     <hr/>
 
                     <!-- ActivateSendout -->
-                    <section id="sect-ActivateSendout">
-                        <h4 id="subsec-ActivateSendout">Activating a Sendout</h4>
+                    <section id="sec-ActivateSendout">
+                        <h4 id="ssec-ActivateSendout">Activating a Sendout</h4>
                         <p>After you have created a Sendout, you need to activate it.</p>
 
                         <br />
@@ -1222,8 +1274,8 @@
                     <hr/>
 
                     <!-- ListRespondents -->
-                    <section id="sect-ListRespondents">
-                        <h4 id="subsec-ListRespondents">Listing Respondents</h4>
+                    <section id="sec-ListRespondents">
+                        <h4 id="ssec-ListRespondents">Listing Respondents</h4>
                         <p>List all Respondents in a Sendout.</p>
 
                         <br />
@@ -1301,8 +1353,8 @@
                     <hr/>
 
                     <!-- AddRespondent -->
-                    <section id="sect-AddRespondent">
-                        <h4 id="subsec-AddRespondent">Adding Respondents</h4>
+                    <section id="sec-AddRespondent">
+                        <h4 id="ssec-AddRespondent">Adding Respondents</h4>
                         <p>Add a new Respondent with optional background data to a Sendout.</p>
 
                         <br />
@@ -1404,8 +1456,8 @@
                     <hr/>
 
                     <!-- ListReminders -->
-                    <section id="sect-ListReminders">
-                        <h4 id="subsec-ListReminders">Listing Reminders</h4>
+                    <section id="sec-ListReminders">
+                        <h4 id="ssec-ListReminders">Listing Reminders</h4>
                         <p>List all Reminders for a Sendout.</p>
 
                         <br />
@@ -1478,8 +1530,8 @@
                     <hr/>
 
                     <!-- CreateReminder -->
-                    <section id="sect-CreateReminder">
-                        <h4 id="subsec-CreateReminder">Creating a Reminder</h4>
+                    <section id="sec-CreateReminder">
+                        <h4 id="ssec-CreateReminder">Creating a Reminder</h4>
                         <p>Create a Reminder for a Sendout.</p>
 
                         <br />
@@ -1585,8 +1637,8 @@
                     <hr/>
 
                     <!-- ListBackgroundLabels -->
-                    <section id="sect-ListBackgroundLabels">
-                        <h4 id="subsec-ListBackgroundLabels">Listing Background Data Labels</h4>
+                    <section id="sec-ListBackgroundLabels">
+                        <h4 id="ssec-ListBackgroundLabels">Listing Background Data Labels</h4>
                         <p>List all background data labels in a Sendout.</p>
 
                         <br />
@@ -1659,8 +1711,8 @@
                     <hr/>
 
                     <!-- CreateBackgroundLabel -->
-                    <section id="sect-CreateBackgroundLabel">
-                        <h4 id="subsec-CreateBackgroundLabel">Creating a Background Data Label</h4>
+                    <section id="sec-CreateBackgroundLabel">
+                        <h4 id="ssec-CreateBackgroundLabel">Creating a Background Data Label</h4>
                         <p>Create a background data label in a Sendout.</p>
 
                         <br />
@@ -1760,8 +1812,8 @@
                     <h2 id="categories">Categories</h2>
 
                     <!-- ListCategories -->
-                    <section id="sect-ListCategories">
-                        <h4 id="subsec-ListCategories">Listing Categories</h4>
+                    <section id="sec-ListCategories">
+                        <h4 id="ssec-ListCategories">Listing Categories</h4>
                         <p>List all Categories in an Account.</p>
 
                         <br />
@@ -1836,8 +1888,8 @@
                     <hr/>
 
                     <!-- GetCategory -->
-                    <section id="sect-GetCategory">
-                        <h4 id="subsec-GetCategory">Retrieving a Category</h4>
+                    <section id="sec-GetCategory">
+                        <h4 id="ssec-GetCategory">Retrieving a Category</h4>
                         <p>Retrieve a specific Category in an Account.</p>
 
                         <br />
@@ -1902,8 +1954,8 @@
                     <hr/>
 
                     <!-- CreateCategory -->
-                    <section id="sect-CreateCategory">
-                        <h4 id="subsec-CreateCategory">Creating a Category</h4>
+                    <section id="sec-CreateCategory">
+                        <h4 id="ssec-CreateCategory">Creating a Category</h4>
                         <p>Create a new Category in an Account.</p>
 
                         <br />
@@ -1997,8 +2049,8 @@
                     <hr/>
 
                     <!-- UpdateCategory -->
-                    <section id="sect-UpdateCategory">
-                        <h4 id="subsec-UpdateCategory">Updating a Category</h4>
+                    <section id="sec-UpdateCategory">
+                        <h4 id="ssec-UpdateCategory">Updating a Category</h4>
                         <p>Update a Category.</p>
 
                         <br />
@@ -2097,8 +2149,8 @@
                     <h2 id="users">Users</h2>
 
                     <!-- ListUsers -->
-                    <section id="sect-ListUsers">
-                        <h4 id="subsec-ListUsers">Listing Users</h4>
+                    <section id="sec-ListUsers">
+                        <h4 id="ssec-ListUsers">Listing Users</h4>
                         <p>List all Users in an Account.</p>
 
                         <br />
@@ -2197,8 +2249,8 @@
                     <hr/>
 
                     <!-- GetUser -->
-                    <section id="sect-GetUser">
-                        <h4 id="subsec-GetUser">Retrieving a User</h4>
+                    <section id="sec-GetUser">
+                        <h4 id="ssec-GetUser">Retrieving a User</h4>
                         <p>Retrieve a specific User in an Account.</p>
 
                         <br />
@@ -2279,8 +2331,8 @@
                     <h2 id="misc">Misc</h2>
 
                     <!-- ListBlocks -->
-                    <section id="sect-ListBlocks">
-                        <h4 id="subsec-ListBlocks">Blocklist</h4>
+                    <section id="sec-ListBlocks">
+                        <h4 id="ssec-ListBlocks">Blocklist</h4>
                         <p>List all blocked and opt-out respondents in account.</p>
 
                         <br />
@@ -2353,8 +2405,8 @@
                     <h2 id="Dummy">Dummy</h2>
 
                     <!-- DummyMethod -->
-                    <section id="sect-DummyMethod">
-                        <h4 id="subsec-DummyMethod">Listing AnswerSets</h4>
+                    <section id="sec-DummyMethod">
+                        <h4 id="ssec-DummyMethod">Listing AnswerSets</h4>
                         <p>List all AnswerSets in a survey.</p>
 
                         <br />
