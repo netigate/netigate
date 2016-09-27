@@ -1,0 +1,16 @@
+{
+    "UserId":2147483647,
+    "Name":"Foo Bar",
+    "Email":"foo@bar.com",
+    "ExpiryDate":"2016-12-31",
+    "Language":"en",
+    "FolderPermission":
+    [
+        {
+            "Key":"all", 
+            "Value":"rw"
+        }
+    ],
+    "SurveyPermission":[null],
+    "AnonymousAnswers":true
+}

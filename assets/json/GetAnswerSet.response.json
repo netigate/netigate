@@ -1,0 +1,30 @@
+{
+    "AnswerSetId":2147483647,
+    "Respondent":2147483647,
+    "Created":"2016-09-09T12:02:37Z",
+    "Completed":"2016-09-09T12:05:54Z",
+    "Answers":[
+        {
+            "AnswerId":2147483647,
+            "Created":"2016-09-09T12:02:57Z",
+            "AnswerSet":2147483647,
+            "QuestionItem":2147483647,
+            "QuestionType":"String content",
+            "QuestionText":"String content",
+            "AnswerText":"String content",
+            "AnswerNumeric":2147483647
+            "AnswerWeight":2147483647
+        }, 
+        {
+            "AnswerId":2147483647,
+            "Created":"2016-09-09T12:03:28Z",
+            "AnswerSet":2147483647,
+            "QuestionItem":2147483647,
+            "QuestionType":"String content",
+            "QuestionText":"String content",
+            "AnswerText":"String content",
+            "AnswerNumeric":2147483647
+            "AnswerWeight":2147483647
+        }
+    ]
+}

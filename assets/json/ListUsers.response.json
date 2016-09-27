@@ -1,0 +1,38 @@
+[
+    {
+        "UserId":2147483647,
+        "Name":"Foo Bar",
+        "Email":"foo@bar.com",
+        "ExpiryDate":"2016-12-31",
+        "Language":"en",
+        "FolderPermission":
+        [
+            {
+                "Key":"all", 
+                "Value":"rw"
+            }
+        ],
+        "SurveyPermission":[null],
+        "AnonymousAnswers":true
+    }, 
+    {
+        "Id":2147483647,
+        "Name":"Goo Bar",
+        "Email":"goo@bar.com",
+        "ExpiryDate":"2020-06-30",
+        "Language":"sv",
+        "FolderPermission":[null],
+        "SurveyPermission":
+        [
+            {
+                "Key":"112233", 
+                "Value":"r"
+            },
+            {
+                "Key":"112234", 
+                "Value":"r"
+            }
+        ],
+        "AnonymousAnswers":false
+    }
+]

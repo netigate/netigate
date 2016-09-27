@@ -218,33 +218,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListSurveys">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "SurveyId":"12345", 
-        "Name":"NPS Survey 2016", 
-        "StartDate":"2016-01-01T12:00:00Z", 
-        "EndDate":"2016-12-31T12:00:00Z", 
-        "Category":"1034", 
-        "Activated":"true"
-    }, 
-    {
-        "SurveyId":"12346", 
-        "Name":"eNPS SE 2016 Q3", 
-        "StartDate":"2016-07-01T12:00:00Z", 
-        "EndDate":"2016-09-30T12:00:00Z", 
-        "Category":"1033", 
-        "Activated":"true"
-    }, {
-        "SurveyId":"12347", 
-        "Name":"Coffee cupping @ HQ (internal)", 
-        "StartDate":"2016-10-14T12:00:00Z", 
-        "EndDate":"2016-10-21T12:00:00Z", 
-        "Category":"1058", 
-        "Activated":"false"
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ListSurveys.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListSurveys">
@@ -303,16 +277,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-GetSurvey">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "SurveyId":"12345", 
-    "Name":"NPS Survey 2016", 
-    "StartDate":"2016-01-01T12:00:00Z", 
-    "EndDate":"2016-12-31T12:00:00Z", 
-    "Category":"1034", 
-    "Activated":"true"
-}
-            </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/GetSurvey.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetSurvey">
@@ -377,237 +342,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListQuestions">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "QuestionId":2147483647,
-        "Order":1,
-        "Text":"First question",
-        "Description":"Please enter your details below.",
-        "QuestionItems":
-        [
-            {
-                "QuestionItemId":2147483647,
-                "Order":1,
-                "Type":"TEXT_FIELD",
-                "Text":"Name?",
-                "Rows":[null], 
-                "Columns":[null]
-            }, 
-            {
-                "QuestionItemId":2147483647,
-                "Order":2,
-                "Type":"RADIOBUTTON",
-                "Text":"Gender",
-                "Rows":
-                [
-                    {
-                        "Order":1,
-                        "Text":"Female",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":2,
-                        "Text":"Male",
-                        "Weight":null
-                    }
-                ], 
-                "Columns":[null]
-            }, 
-            {
-                "QuestionItemId":2147483647,
-                "Order":3,
-                "Type":"DROPDOWN",
-                "Text":"Department",
-                "Rows":
-                [
-                    {
-                        "Order":1,
-                        "Text":"Administration",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":2,
-                        "Text":"HR",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":3,
-                        "Text":"R&D",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":4,
-                        "Text":"Finance",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":5,
-                        "Text":"Sales",
-                        "Weight":null
-                    }
-                ],
-                "Columns":[null]
-            }
-        ]
-    }, 
-    {
-        "QuestionId":2147483647,
-        "Order":2,
-        "Text":"Second question",
-        "Description":"Evaluate the coffe cupping.",
-        "QuestionItems":
-        [
-            {
-                "QuestionItemId":2147483647,
-                "Order":1,
-                "Type":"RADIOBUTTON",
-                "Text":"Which coffee was your favourite?",
-                "Rows":
-                [
-                    {
-                        "Order":1,
-                        "Text":"A",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":2,
-                        "Text":"B",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":3,
-                        "Text":"C",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":4,
-                        "Text":"D",
-                        "Weight":null
-                    }
-                ],
-                "Columns":[null]
-            }, 
-            {
-                "QuestionItemId":2147483647,
-                "Order":2,
-                "Type":"RADIOBUTTON",
-                "Text":"Which coffee did you least prefer?",
-                "Rows":
-                [
-                    {
-                        "Order":1,
-                        "Text":"A",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":2,
-                        "Text":"B",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":3,
-                        "Text":"C",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":4,
-                        "Text":"D",
-                        "Weight":null
-                    }
-                ],
-                "Columns":[null]
-            }, 
-            {
-                "QuestionItemId":2147483647,
-                "Order":3,
-                "Type":"WEIGHTED_RADIOBUTTON",
-                "Text":"Should we make this into a tradition?",
-                "Rows":
-                [
-                    {
-                        "Order":1,
-                        "Text":"No, social gatherings are not my cup of tea.",
-                        "Weight":1
-                    }, 
-                    {
-                        "Order":2,
-                        "Text":"",
-                        "Weight":2
-                    }, 
-                    {
-                        "Order":3,
-                        "Text":"Why not.",
-                        "Weight":3
-                    }, 
-                    {
-                        "Order":4,
-                        "Text":"",
-                        "Weight":4
-                    }, 
-                    {
-                        "Order":5,
-                        "Text":"Yes, I would very much like so.",
-                        "Weight":5
-                    }
-                ],
-                "Columns":[null]
-            }
-        ]
-    },
-    {
-        "QuestionId":2147483647,
-        "Order":1,
-        "Text":"Third question",
-        "Description":"",
-        "QuestionItems":
-        [
-            {
-                "QuestionItemId":2147483647,
-                "Order":1,
-                "Type":"MATRIX",
-                "Text":"This is a matrix. Rate the following statements:",
-                "Rows":
-                [
-                    {
-                        "Order":1,
-                        "Text":"I enjoy the countryside",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":2,
-                        "Text":"I would like to visit space",
-                        "Weight":null
-                    },
-                    {
-                        "Order":3,
-                        "Text":"There's no shortcut to the perfect sound system",
-                        "Weight":null
-                    }
-                ], 
-                "Columns":
-                [
-                    {
-                        "Order":1,
-                        "Text":"Disagree",
-                        "Weight":null
-                    }, 
-                    {
-                        "Order":2,
-                        "Text":"Agree partially",
-                        "Weight":null
-                    },
-                    {
-                        "Order":3,
-                        "Text":"Completely agree",
-                        "Weight":null
-                    }
-                ], 
-            }, 
-        ]
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ListQuestions.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListQuestions">
@@ -671,24 +406,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListAnswerSets">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "AnswerSetId":2147483647,
-        "Respondent":2147483647,
-        "Created":"2016-09-09T12:02:37Z",
-        "Completed":"2016-09-09T12:05:54Z",
-        "Answers":[]
-    }, 
-    {
-        "AnswerSetId":2147483647,
-        "Respondent":2147483647,
-        "Created":"2016-09-09T12:02:37Z",
-        "Completed":"2016-09-09T12:05:54Z",
-        "Answers":[]
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ListAnswerSets.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListAnswerSets">
@@ -747,38 +465,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-GetAnswerSet">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "AnswerSetId":2147483647,
-    "Respondent":2147483647,
-    "Created":"2016-09-09T12:02:37Z",
-    "Completed":"2016-09-09T12:05:54Z",
-    "Answers":[
-        {
-            "AnswerId":2147483647,
-            "Created":"2016-09-09T12:02:57Z",
-            "AnswerSet":2147483647,
-            "QuestionItem":2147483647,
-            "QuestionType":"String content",
-            "QuestionText":"String content",
-            "AnswerText":"String content",
-            "AnswerNumeric":2147483647
-            "AnswerWeight":2147483647
-        }, 
-        {
-            "AnswerId":2147483647,
-            "Created":"2016-09-09T12:03:28Z",
-            "AnswerSet":2147483647,
-            "QuestionItem":2147483647,
-            "QuestionType":"String content",
-            "QuestionText":"String content",
-            "AnswerText":"String content",
-            "AnswerNumeric":2147483647
-            "AnswerWeight":2147483647
-        }
-    ]
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/GetAnswerSet.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetAnswerSet">
@@ -837,32 +524,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-GetAnswer">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "AnswerId":2147483647,
-        "Created":"2016-09-09T12:03:28Z",
-        "AnswerSet":2147483647,
-        "QuestionItem":2147483647,
-        "QuestionType":"String content",
-        "QuestionText":"String content",
-        "AnswerText":"String content",
-        "AnswerNumeric":2147483647
-        "AnswerWeight":2147483647
-    }, 
-    {
-        "AnswerId":2147483647,
-        "Created":"2016-09-09T12:03:38Z",
-        "AnswerSet":2147483647,
-        "QuestionItem":2147483647,
-        "QuestionType":"String content",
-        "QuestionText":"String content",
-        "AnswerText":"String content",
-        "AnswerNumeric":2147483647
-        "AnswerWeight":2147483647
-    }, 
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/GetAnswer.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetAnswer">
@@ -927,34 +589,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListSendouts">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "SendoutId":2147483647,
-        "Survey":2147483647,
-        "Primary":{
-            "DispatchId":2147483647,
-            "Name":"String content",
-            "SendDate":"2016-06-01T13:00:00Z",
-            "DoneDate":"2016-06-01T13:05:00Z",
-            "DispatchType":"String content",
-            "SendoutType":"String content",
-            "SendoutLogic":"String content",
-            "Activated":true
-        },
-        "Reminders":[{
-            "DispatchId":2147483647,
-            "Name":"String content",
-            "SendDate":"2016-06-15T13:00:00Z",
-            "DoneDate":null,
-            "DispatchType":"String content",
-            "SendoutType":"String content",
-            "SendoutLogic":"String content",
-            "Activated":false
-        }]
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ListSendouts.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListSendouts">
@@ -1013,45 +648,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-GetSendout">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "SendoutId":2147483647,
-    "Survey":2147483647,
-    "Primary":{
-        "DispatchId":2147483647,
-        "Name":"String content",
-        "SendDate":"2016-06-01T13:00:00Z",
-        "DoneDate":"2016-06-01T13:05:00Z",
-        "DispatchType":"String content",
-        "SendoutType":"String content",
-        "SendoutLogic":"String content",
-        "Activated":true
-    },
-    "Reminders":
-    [
-        {
-            "DispatchId":2147483647,
-            "Name":"Reminder",
-            "SendDate":"2016-06-08T13:00:00Z",
-            "DoneDate":null,
-            "DispatchType":"String content",
-            "SendoutType":"String content",
-            "SendoutLogic":"String content",
-            "Activated":false
-        }, 
-        {
-            "DispatchId":2147483647,
-            "Name":"2 week reminder",
-            "SendDate":"2016-06-15T13:00:00Z",
-            "DoneDate":null,
-            "DispatchType":"String content",
-            "SendoutType":"String content",
-            "SendoutLogic":"String content",
-            "Activated":true
-        }
-    ]
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/GetSendout.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetSendout">
@@ -1112,16 +709,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="reqbody-CreateSendout">
-                                    <pre class="line-numbers line-numbers-copy"><code class="language-json">
-{
-    "name":"", 
-    "type":"", 
-    "sendDate":"", 
-    "sender":"", 
-    "subject":"", 
-    "message":""
-}
-                                    </code></pre>
+                                    <pre class="line-numbers line-numbers-copy" data-src="assets/json/CreateSendout.request.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqbody-CreateSendout">
@@ -1146,22 +734,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-CreateSendout">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "SendoutId":2147483647,
-    "Survey":2147483647,
-    "Primary":{
-        "DispatchId":2147483647,
-        "Name":"String content",
-        "SendDate":"2016-06-01T13:00:00Z",
-        "DoneDate":"2016-06-01T13:05:00Z",
-        "DispatchType":"String content",
-        "SendoutType":"String content",
-        "SendoutLogic":"String content",
-        "Activated":true
-    },
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/CreateSendout.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-CreateSendout">
@@ -1222,35 +795,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ActivateSendout">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "SendoutId":2147483647,
-    "Survey":2147483647,
-    "Primary":{
-        "DispatchId":2147483647,
-        "Name":"String content",
-        "SendDate":"2016-06-01T13:00:00Z",
-        "DoneDate":"2016-06-01T13:05:00Z",
-        "DispatchType":"String content",
-        "SendoutType":"String content",
-        "SendoutLogic":"String content",
-        "Activated":true
-    },
-    "Reminders":
-    [
-        {
-            "DispatchId":2147483647,
-            "Name":"Reminder",
-            "SendDate":"2016-06-08T13:00:00Z",
-            "DoneDate":null,
-            "DispatchType":"String content",
-            "SendoutType":"String content",
-            "SendoutLogic":"String content",
-            "Activated":true
-        }
-    ]
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ActivateSendout.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ActivateSendout">
@@ -1311,25 +856,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListRespondents">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "RespondentId":2147483647,
-        "Email":"foo@bar.com",
-        "Password":"String content"
-    }, 
-    {
-        "RespondentId":2147483647,
-        "Email":"goo@bar.com",
-        "Password":"String content"
-    }, 
-    {
-        "RespondentId":2147483647,
-        "Email":"hoo@bar.com",
-        "Password":"String content"
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ListRespondents.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListRespondents">
@@ -1390,16 +917,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="reqb-AddRespondent">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "contactDetails":"foo@bar.com", 
-    "backgroundData": {
-        12345:"Value1",     
-        12346:"Value2", 
-        12347:"Value3"
-    }
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/AddRespondent.request.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-AddRespondent">
@@ -1424,15 +942,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-AddRespondent">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "RespondentId":2147483647,
-        "Email":"foo@bar.com",
-        "Password":"String content"
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/AddRespondent.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-AddRespondent">
@@ -1493,20 +1003,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListReminders">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "DispatchId":2147483647,
-        "Name":"Reminder",
-        "SendDate":"2016-06-08T13:00:00Z",
-        "DoneDate":null,
-        "DispatchType":"String content",
-        "SendoutType":"String content",
-        "SendoutLogic":"String content",
-        "Activated":false
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ListReminders.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListReminders">
@@ -1567,17 +1064,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="reqb-CreateReminder">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "name":"", 
-    "sendoutLogic":""
-    "type":"", 
-    "sendDate":"", 
-    "sender":"", 
-    "subject":"", 
-    "message":""
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/CreateReminder.request.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateReminder">
@@ -1602,18 +1089,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-CreateReminder">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "DispatchId":2147483647,
-    "Name":"Reminder",
-    "SendDate":"2016-06-08T13:00:00Z",
-    "DoneDate":null,
-    "DispatchType":"String content",
-    "SendoutType":"String content",
-    "SendoutLogic":"String content",
-    "Activated":false
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/CreateReminder.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-CreateReminder">
@@ -1674,20 +1150,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListBackgroundLabels">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "BGDataLabelId":2147483647,
-        "Name":"Department",
-        "Type":"ORDINAL"
-    },
-    {
-        "BGDataLabelId":2147483647,
-        "Name":"Manager",
-        "Type":"TEXT"
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ListBackgroundLabels.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListBackgroundLabels">
@@ -1748,12 +1211,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="reqb-CreateBackgroundLabel">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "name":"FirstName",
-    "labelType":"TEXT"
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/CreateBackgroundLabel.request.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateBackgroundLabel">
@@ -1778,13 +1236,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-CreateBackgroundLabel">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "BGDataLabelId":2147483647,
-    "Name":"FirstName",
-    "Type":"TEXT"
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/CreateBackgroundLabel.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-CreateBackgroundLabel">
@@ -1849,22 +1301,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListCategories">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "CategoryId":2147483647,
-        "Name":"API Surveys"
-    }, 
-    {
-        "CategoryId":2147483647,
-        "Name":"Internal"
-    }, 
-    {
-        "CategoryId":2147483647,
-        "Name":"HR"
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ListCategories.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListCategories">
@@ -1925,12 +1362,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-GetCategory">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "CategoryId":2147483647,
-    "Name":"API Surveys"
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/GetCategory.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetCategory">
@@ -1991,11 +1423,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="reqb-CreateCategory">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "name":"My category"
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/CreateCategory.request.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateCategory">
@@ -2020,12 +1448,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-CreateCategory">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "CategoryId":2147483647,
-    "Name":"My category"
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/CreateCategory.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-CreateCategory">
@@ -2086,12 +1509,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="reqb-UpdateCategory">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "CategoryId":2147483647
-    "Name":"My category (internal)"
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/UpdateCategory.request.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-UpdateCategory">
@@ -2116,12 +1534,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-UpdateCategory">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "CategoryId":2147483647,
-    "Name":"My category (internal)"
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/UpdateCategory.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-UpdateCategory">
@@ -2186,46 +1599,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListUsers">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "UserId":2147483647,
-        "Name":"Foo Bar",
-        "Email":"foo@bar.com",
-        "ExpiryDate":"2016-12-31",
-        "Language":"en",
-        "FolderPermission":
-        [
-            {
-                "Key":"all", 
-                "Value":"rw"
-            }
-        ],
-        "SurveyPermission":[null],
-        "AnonymousAnswers":true
-    }, 
-    {
-        "Id":2147483647,
-        "Name":"Goo Bar",
-        "Email":"goo@bar.com",
-        "ExpiryDate":"2020-06-30",
-        "Language":"sv",
-        "FolderPermission":[null],
-        "SurveyPermission":
-        [
-            {
-                "Key":"112233", 
-                "Value":"r"
-            },
-            {
-                "Key":"112234", 
-                "Value":"r"
-            }
-        ],
-        "AnonymousAnswers":false
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ListUsers.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListUsers">
@@ -2286,24 +1660,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-GetUser">
-                                    <pre class="line-numbers"><code class="language-json">
-{
-    "UserId":2147483647,
-    "Name":"Foo Bar",
-    "Email":"foo@bar.com",
-    "ExpiryDate":"2016-12-31",
-    "Language":"en",
-    "FolderPermission":
-    [
-        {
-            "Key":"all", 
-            "Value":"rw"
-        }
-    ],
-    "SurveyPermission":[null],
-    "AnonymousAnswers":true
-}
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/GetUser.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetUser">
@@ -2368,16 +1725,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListBlocks">
-                                    <pre class="line-numbers"><code class="language-json">
-[
-    {
-        "Email":"foo@bar.com"
-    }, 
-    {
-        "Email":"spam@bar.com"
-    }
-]
-                                    </code></pre>
+                                    <pre class="line-numbers" data-src="assets/json/ListBlocks.response.json"></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListBlocks">

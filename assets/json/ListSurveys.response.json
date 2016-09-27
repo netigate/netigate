@@ -1,0 +1,25 @@
+[
+    {
+        "SurveyId":"12345", 
+        "Name":"NPS Survey 2016", 
+        "StartDate":"2016-01-01T12:00:00Z", 
+        "EndDate":"2016-12-31T12:00:00Z", 
+        "Category":"1034", 
+        "Activated":"true"
+    }, 
+    {
+        "SurveyId":"12346", 
+        "Name":"eNPS SE 2016 Q3", 
+        "StartDate":"2016-07-01T12:00:00Z", 
+        "EndDate":"2016-09-30T12:00:00Z", 
+        "Category":"1033", 
+        "Activated":"true"
+    }, {
+        "SurveyId":"12347", 
+        "Name":"Coffee cupping @ HQ (internal)", 
+        "StartDate":"2016-10-14T12:00:00Z", 
+        "EndDate":"2016-10-21T12:00:00Z", 
+        "Category":"1058", 
+        "Activated":"false"
+    }
+]

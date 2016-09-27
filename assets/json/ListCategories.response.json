@@ -1,0 +1,14 @@
+[
+    {
+        "CategoryId":2147483647,
+        "Name":"API Surveys"
+    }, 
+    {
+        "CategoryId":2147483647,
+        "Name":"Internal"
+    }, 
+    {
+        "CategoryId":2147483647,
+        "Name":"HR"
+    }
+]

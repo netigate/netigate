@@ -1,0 +1,8 @@
+{
+    "SurveyId":"12345", 
+    "Name":"NPS Survey 2016", 
+    "StartDate":"2016-01-01T12:00:00Z", 
+    "EndDate":"2016-12-31T12:00:00Z", 
+    "Category":"1034", 
+    "Activated":"true"
+}

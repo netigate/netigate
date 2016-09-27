@@ -1,0 +1,37 @@
+{
+    "SendoutId":2147483647,
+    "Survey":2147483647,
+    "Primary":{
+        "DispatchId":2147483647,
+        "Name":"String content",
+        "SendDate":"2016-06-01T13:00:00Z",
+        "DoneDate":"2016-06-01T13:05:00Z",
+        "DispatchType":"String content",
+        "SendoutType":"String content",
+        "SendoutLogic":"String content",
+        "Activated":true
+    },
+    "Reminders":
+    [
+        {
+            "DispatchId":2147483647,
+            "Name":"Reminder",
+            "SendDate":"2016-06-08T13:00:00Z",
+            "DoneDate":null,
+            "DispatchType":"String content",
+            "SendoutType":"String content",
+            "SendoutLogic":"String content",
+            "Activated":false
+        }, 
+        {
+            "DispatchId":2147483647,
+            "Name":"2 week reminder",
+            "SendDate":"2016-06-15T13:00:00Z",
+            "DoneDate":null,
+            "DispatchType":"String content",
+            "SendoutType":"String content",
+            "SendoutLogic":"String content",
+            "Activated":true
+        }
+    ]
+}

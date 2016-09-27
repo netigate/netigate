@@ -1,0 +1,8 @@
+{
+    "contactDetails":"foo@bar.com", 
+    "backgroundData": {
+        12345:"Value1",     
+        12346:"Value2", 
+        12347:"Value3"
+    }
+}

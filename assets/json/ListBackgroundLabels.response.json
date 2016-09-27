@@ -1,0 +1,12 @@
+[
+    {
+        "BGDataLabelId":2147483647,
+        "Name":"Department",
+        "Type":"ORDINAL"
+    },
+    {
+        "BGDataLabelId":2147483647,
+        "Name":"Manager",
+        "Type":"TEXT"
+    }
+]

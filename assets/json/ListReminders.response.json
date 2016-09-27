@@ -1,0 +1,12 @@
+[
+    {
+        "DispatchId":2147483647,
+        "Name":"Reminder",
+        "SendDate":"2016-06-08T13:00:00Z",
+        "DoneDate":null,
+        "DispatchType":"String content",
+        "SendoutType":"String content",
+        "SendoutLogic":"String content",
+        "Activated":false
+    }
+]
