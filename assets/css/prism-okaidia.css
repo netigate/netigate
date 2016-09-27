@@ -1,4 +1,4 @@
-/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+aspnet+csharp+css-extras+http+json&plugins=line-numbers+show-language */
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+aspnet+csharp+css-extras+http+json&plugins=line-numbers+file-highlight+show-language */
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -145,22 +145,22 @@ pre.line-numbers > code {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
 }
 
-.line-numbers-rows > span {
-	pointer-events: none;
-	display: block;
-	counter-increment: linenumber;
-}
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
 
-.line-numbers-rows > span:before {
-	content: counter(linenumber);
-	color: #999;
-	display: block;
-	padding-right: 0.8em;
-	text-align: right;
-}
-
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
 div.prism-show-language {
 	position: relative;
 }
@@ -188,3 +188,4 @@ div.prism-show-language > div.prism-show-language-label {
 	-o-transform: none;
 	transform: none;
 }
+

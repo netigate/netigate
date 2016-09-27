@@ -9,8 +9,8 @@ function emphasizeHTTP(str) {
     return str;
 }
 
-$(function () {
-    $(".ntg-http-request").each(function () {
+jQuery(function($) {
+    $(".ntg-http-request").each(function() {
         $(this).html(emphasizeHTTP($(this).html()));
     });
-})(jQuery);
+});
