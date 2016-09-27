@@ -149,24 +149,14 @@
 
                 <p class="lead">We are quite excited to present our new API.</p>
 
-
+                <!-- Intro -->
                 <section>
                     <h2 id="intro">Intro</h2>
-                    <p>While this page is enough to see through its code and get start with it, but you can see the page code structure in below. Make sure you'll have <code>data-spy=&quot;scroll&quot; data-target=&quot;.sidebar&quot; data-offset=&quot;200&quot;</code> attribute in <code>&lt;body&gt;</code> tag.</p>
-
-                        <pre class="line-numbers line-numbers-copy"><code class="language-json">
-{
-    "Id":214781320312,
-    "Name":"Stränginnehåll",
-    "GUID":"Stränginnehåll",
-    "StartDate":"\/Date(92871723712372+0200)\/",
-    "EndDate":"\/Date(9281231237236+0200)\/",
-    "Activated":true,
-    "Category":"Stränginnehåll"
-}
-                        </code></pre>
-
+                    <p>While this page is enough to see through its code and get start with it, but you can see the page code structure in below. Make sure you'll have <code>data-spy=&quot;scroll&quot; data-target=&quot;.sidebar&quot; data-offset=&quot;200&quot;</code> attribute in <code>&lt;body&gt;</code> tag.
+                        <pre class="line-numbers"><code id="ex-intro" class="language-json"></code></pre>
+                    </p>
                 </section>
+                <!-- END Intro -->
 
                 <!-- Authentication -->
                 <section>
@@ -254,7 +244,7 @@
         "Activated":"false"
     }
 ]
-			</code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListSurveys">
@@ -322,7 +312,7 @@
     "Category":"1034", 
     "Activated":"true"
 }
-			</code></pre>
+            </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetSurvey">
@@ -617,7 +607,7 @@
         ]
     }
 ]
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListQuestions">
@@ -698,7 +688,7 @@
         "Answers":[]
     }
 ]
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListAnswerSets">
@@ -788,7 +778,7 @@
         }
     ]
 }
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetAnswerSet">
@@ -872,7 +862,7 @@
         "AnswerWeight":2147483647
     }, 
 ]
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetAnswer">
@@ -964,7 +954,7 @@
         }]
     }
 ]
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListSendouts">
@@ -1061,7 +1051,7 @@
         }
     ]
 }
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetSendout">
@@ -1131,7 +1121,7 @@
     "subject":"", 
     "message":""
 }
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqbody-CreateSendout">
@@ -1171,7 +1161,7 @@
         "Activated":true
     },
 }
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-CreateSendout">
@@ -1260,7 +1250,7 @@
         }
     ]
 }
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ActivateSendout">
@@ -1339,7 +1329,7 @@
         "Password":"String content"
     }
 ]
-                    				</code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListRespondents">
@@ -1409,7 +1399,7 @@
         12347:"Value3"
     }
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-AddRespondent">
@@ -1442,7 +1432,7 @@
         "Password":"String content"
     }
 ]
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-AddRespondent">
@@ -1587,7 +1577,7 @@
     "subject":"", 
     "message":""
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateReminder">
@@ -1623,7 +1613,7 @@
     "SendoutLogic":"String content",
     "Activated":false
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-CreateReminder">
@@ -1686,18 +1676,18 @@
                                 <div role="tabpanel" class="tab-pane active in" id="resp-ListBackgroundLabels">
                                     <pre class="line-numbers"><code class="language-json">
 [
-	{
-		"BGDataLabelId":2147483647,
-		"Name":"Department",
-		"Type":"ORDINAL"
-	},
-	{
-		"BGDataLabelId":2147483647,
-		"Name":"Manager",
-		"Type":"TEXT"
-	}
+    {
+        "BGDataLabelId":2147483647,
+        "Name":"Department",
+        "Type":"ORDINAL"
+    },
+    {
+        "BGDataLabelId":2147483647,
+        "Name":"Manager",
+        "Type":"TEXT"
+    }
 ]
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListBackgroundLabels">
@@ -1763,7 +1753,7 @@
     "name":"FirstName",
     "labelType":"TEXT"
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateBackgroundLabel">
@@ -1794,7 +1784,7 @@
     "Name":"FirstName",
     "Type":"TEXT"
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-CreateBackgroundLabel">
@@ -1874,7 +1864,7 @@
         "Name":"HR"
     }
 ]
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListCategories">
@@ -1940,7 +1930,7 @@
     "CategoryId":2147483647,
     "Name":"API Surveys"
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetCategory">
@@ -2005,7 +1995,7 @@
 {
     "name":"My category"
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateCategory">
@@ -2035,7 +2025,7 @@
     "CategoryId":2147483647,
     "Name":"My category"
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-CreateCategory">
@@ -2101,7 +2091,7 @@
     "CategoryId":2147483647
     "Name":"My category (internal)"
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-UpdateCategory">
@@ -2131,7 +2121,7 @@
     "CategoryId":2147483647,
     "Name":"My category (internal)"
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-UpdateCategory">
@@ -2235,7 +2225,7 @@
         "AnonymousAnswers":false
     }
 ]
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListUsers">
@@ -2313,7 +2303,7 @@
     "SurveyPermission":[null],
     "AnonymousAnswers":true
 }
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-GetUser">
@@ -2387,7 +2377,7 @@
         "Email":"spam@bar.com"
     }
 ]
-				                    </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-ListBlocks">
@@ -2479,7 +2469,7 @@
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="resp-DummyMethod">
                                     <pre class="line-numbers"><code class="language-json">
-			                        </code></pre>
+                                    </code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-resp-DummyMethod">
