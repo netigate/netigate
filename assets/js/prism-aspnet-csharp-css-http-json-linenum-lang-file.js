@@ -899,7 +899,7 @@ Prism.hooks.add('complete', function (env) {
 	self.Prism.fileHighlight = function() {
 
 		var Extensions = {
-			'js': 'javascript',
+            'json': 'json',
 			'py': 'python',
 			'rb': 'ruby',
 			'ps1': 'powershell',
