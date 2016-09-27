@@ -1,205 +1,229 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-        <title>Netigate REST API</title>
+    <title>Netigate REST API</title>
 
-        <!-- Styles -->
-        <link href="assets/css/theDocs.all.css" rel="stylesheet">
-        <link href="assets/css/custom.css" rel="stylesheet">
-        <link href="assets/css/netapi.css" rel="stylesheet">
-        <link href="assets/css/prism-okaidia.css" rel="stylesheet"/>
+    <!-- Styles -->
+    <link href="assets/css/theDocs.all.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/netapi.css" rel="stylesheet">
+    <link href="assets/css/prism-okaidia.css" rel="stylesheet" />
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet" type="text/css">
 
-        <!-- Favicons -->
-        <!--<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
-        <link rel="icon" href="assets/img/favicon.ico">
-    </head>
+    <!-- Favicons -->
+    <!--<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+    <link rel="icon" href="assets/img/favicon.ico">
+</head>
 
-    <body data-spy="scroll" data-target=".sidebar" data-offset="200">
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
 
-        <!-- Sidebar -->
-        <aside class="sidebar sidebar-boxed sidebar-dark">
+    <!-- Sidebar -->
+    <aside class="sidebar sidebar-boxed sidebar-dark">
 
-            <a class="sidebar-brand" href="index.html"><img src="assets/img/logo-sidebar.png" alt="logo"></a>
+        <a class="sidebar-brand" href="index.html"><img src="assets/img/logo-sidebar.png" alt="logo"></a>
 
-            <ul class="nav sidenav dropable sticky">
-                <li><a href="#intro">Intro</a></li>
-                <li><a href="#connecting">Connecting</a></li>
-                <li><a href="#auth">Authentication</a></li>
-                <li>
-                    <a href="#surveys">Surveys</a>
-                    <ul>
-                        <li><a href="#ssec-ListSurveys">List Surveys</a></li>
-                        <li><a href="#ssec-GetSurvey">Retrieve Survey</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#questions">Questions</a>
-                    <ul>
-                        <li><a href="#ssec-ListQuestions">List Questions</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#answers">Answers</a>
-                    <ul>
-                        <li><a href="#ssec-ListAnswerSets">List AnswerSets</a></li>
-                        <li><a href="#ssec-GetAnswerSet">Retrieve AnswerSet</a></li>
-                        <li><a href="#ssec-GetAnswer">Retrieve Answer</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#sendouts">Sendouts</a>
-                    <ul>
-                        <li><a href="#ssec-ListSendouts">List Sendouts</a></li>
-                        <li><a href="#ssec-GetSendout">Retrieve Sendout</a></li>
-                        <li><a href="#ssec-CreateSendout">Create Sendout</a></li>
-                        <li><a href="#ssec-ActivateSendout">Activate Sendout</a></li>
-                        <li><a href="#ssec-ListRespondents">List Respondents</a></li>
-                        <li><a href="#ssec-AddRespondent">Add Respondent</a></li>
-                        <li><a href="#ssec-ListReminders">List Reminders</a></li>
-                        <li><a href="#ssec-CreateReminder">Create Reminder</a></li>
-                        <li><a href="#ssec-ListBackgroundLabels">List Background Labels</a></li>
-                        <li><a href="#ssec-CreateBackgroundLabel">Create Background Label</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#categories">Categories</a>
-                    <ul>
-                        <li><a href="#ssec-ListCategories">List Categories</a></li>
-                        <li><a href="#ssec-GetCategory">Retrieve Category</a></li>
-                        <li><a href="#ssec-CreateCategory">Create Category</a></li>
-                        <li><a href="#ssec-UpdateCategory">Update Category</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#users">Users</a>
-                    <ul>
-                        <li><a href="#ssec-ListUsers">List Users</a></li>
-                        <li><a href="#ssec-GetUser">Retrieve User</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#misc">Misc</a>
-                    <ul>
-                        <li><a href="#ssec-ListBlocks">Blocklist</a></li>
-                    </ul>
-                </li>
-            </ul>
+        <ul class="nav sidenav dropable sticky">
+            <li>
+                <a href="#general">General</a>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#connecting">Connecting</a></li>
+                    <li><a href="#auth">Authentication</a></li>
+                </ul>
+            </li>
 
-        </aside>
-        <!-- END Sidebar -->
-
-        <header class="site-header navbar-transparent">
-
-            <!-- Top navbar & branding -->
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-
-                    <!-- Toggle buttons and brand -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-                            <span class="glyphicon glyphicon-option-vertical"></span>
-                        </button>
-
-                        <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-
-                    </div>
-                    <!-- END Toggle buttons and brand -->
-
-                    <!-- Top navbar -->
-                    <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="index.html">Documentation</a></li>
-                            <li><a href="http://netigate.net/success-center/" target="_blank">Success Center</a></li>
-                            <li class="hero"><a href="http://netigate.net/">Try Netigate for 30 days</a></li>
+            <li>
+                <a href="#services">Services</a>
+                <ul>
+                    <li>
+                        <a href="#surveys">Surveys</a>
+                        <ul>
+                            <li><a href="#ssec-ListSurveys">List Surveys</a></li>
+                            <li><a href="#ssec-GetSurvey">Retrieve Survey</a></li>
                         </ul>
-                    </div>
-                    <!-- END Top navbar -->
+                    </li>
+                    <li>
+                        <a href="#questions">Questions</a>
+                        <ul>
+                            <li><a href="#ssec-ListQuestions">List Questions</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#answers">Answers</a>
+                        <ul>
+                            <li><a href="#ssec-ListAnswerSets">List AnswerSets</a></li>
+                            <li><a href="#ssec-GetAnswerSet">Retrieve AnswerSet</a></li>
+                            <li><a href="#ssec-GetAnswer">Retrieve Answer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#sendouts">Sendouts</a>
+                        <ul>
+                            <li><a href="#ssec-ListSendouts">List Sendouts</a></li>
+                            <li><a href="#ssec-GetSendout">Retrieve Sendout</a></li>
+                            <li><a href="#ssec-CreateSendout">Create Sendout</a></li>
+                            <li><a href="#ssec-ActivateSendout">Activate Sendout</a></li>
+                            <li><a href="#ssec-ListRespondents">List Respondents</a></li>
+                            <li><a href="#ssec-AddRespondent">Add Respondent</a></li>
+                            <li><a href="#ssec-ListReminders">List Reminders</a></li>
+                            <li><a href="#ssec-CreateReminder">Create Reminder</a></li>
+                            <li><a href="#ssec-ListBackgroundLabels">List Background Labels</a></li>
+                            <li><a href="#ssec-CreateBackgroundLabel">Create Background Label</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#categories">Categories</a>
+                        <ul>
+                            <li><a href="#ssec-ListCategories">List Categories</a></li>
+                            <li><a href="#ssec-GetCategory">Retrieve Category</a></li>
+                            <li><a href="#ssec-CreateCategory">Create Category</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#users">Users</a>
+                        <ul>
+                            <li><a href="#ssec-ListUsers">List Users</a></li>
+                            <li><a href="#ssec-GetUser">Retrieve User</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#misc">Misc</a>
+                        <ul>
+                            <li><a href="#ssec-ListBlocks">Blocklist</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#types-enums">Types and enums</a>
+                <ul>
+                    <li><a href="#types">Types</a></li>
+                    <li><a href="#enums">Enums</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <!-- END Sidebar -->
+
+    <header class="site-header navbar-transparent">
+
+        <!-- Top navbar & branding -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+                <!-- Toggle buttons and brand -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                        <span class="glyphicon glyphicon-option-vertical"></span>
+                    </button>
+
+                    <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
                 </div>
-            </nav>
-            <!-- END Top navbar & branding -->
-
-            <!-- Banner -->
-            <div class="banner auto-size" style="background-color: #1795ca">
-                <div class="container-fluid text-white">
-                    <h1><strong>Netigate REST API</strong> documentation</h1>
-                    <h5>Connect your insights gathered from the premiere survey platform with the platforms you already use.</h5>
+                <!-- END Toggle buttons and brand -->
+                <!-- Top navbar -->
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Documentation</a></li>
+                        <li><a href="http://netigate.net/success-center/" target="_blank">Success Center</a></li>
+                        <li class="hero"><a href="http://netigate.net/">Try Netigate for 30 days</a></li>
+                    </ul>
                 </div>
+                <!-- END Top navbar -->
+
             </div>
-            <!-- END Banner -->
+        </nav>
+        <!-- END Top navbar & branding -->
+        <!-- Banner -->
+        <div class="banner auto-size" style="background-color: #1795ca">
+            <div class="container-fluid text-white">
+                <h1><strong>Netigate REST API</strong> documentation</h1>
+                <h5>Connect your insights gathered from the premiere survey platform with the platforms you already use.</h5>
+            </div>
+        </div>
+        <!-- END Banner -->
 
-        </header>
+    </header>
 
-        <main class="container-fluid">
+    <main class="container-fluid">
 
-            <!-- Main content -->
-            <article class="main-content" role="main">
+        <!-- Main content -->
+        <article class="main-content" role="main">
 
-                <p class="lead">We are quite excited to present our new API.</p>
+            <p class="lead">We are quite excited to present our new API.</p>
+
+            <!-- General -->
+            <section>
+                <h1 id="general">General</h1>
 
                 <!-- Intro -->
                 <section>
                     <h2 id="intro">Intro</h2>
-                    <p>While this page is enough to see through its code and get start with it, but you can see the page code structure in below. Make sure you'll have <code>data-spy=&quot;scroll&quot; data-target=&quot;.sidebar&quot; data-offset=&quot;200&quot;</code> attribute in <code>&lt;body&gt;</code> tag.
+                    <p>
+                        While this page is enough to see through its code and get start with it, but you can see the page code structure in below. Make sure you'll have <code>data-spy=&quot;scroll&quot; data-target=&quot;.sidebar&quot; data-offset=&quot;200&quot;</code> attribute in <code>&lt;body&gt;</code> tag.
                         <pre class="line-numbers" data-src="assets/json/intro.json"></pre>
                     </p>
                 </section>
                 <!-- END Intro -->
-
                 <!-- Connecting -->
                 <section>
                     <h2 id="connecting">Connecting</h2>
                     <table class="table">
                         <caption>Connection parameters</caption>
                         <tbody>
-                        <tr>
-                            <td>Base URL</td>
-                            <td>https://api.netigate.se/v2/NetigateAPI.svc</td>
-                        </tr>
-                        <tr>
-                            <td>Protocol</td>
-                            <td>HTTPS</td>
-                        </tr>
-                        <tr>
-                            <td>Port</td>
-                            <td>443</td>
-                        </tr>
-                        <tr>
-                            <td>Authentication</td>
-                            <td>Token in HTTP header</td>
-                        </tr>
-                        <tr>
-                            <td>Request/response format</td>
-                            <td>JSON</td>
-                        </tr>
+                            <tr>
+                                <td>Base URL</td>
+                                <td>https://api.netigate.se/v2/NetigateAPI.svc</td>
+                            </tr>
+                            <tr>
+                                <td>Protocol</td>
+                                <td>HTTPS</td>
+                            </tr>
+                            <tr>
+                                <td>Port</td>
+                                <td>443</td>
+                            </tr>
+                            <tr>
+                                <td>Authentication</td>
+                                <td>Token in HTTP header</td>
+                            </tr>
+                            <tr>
+                                <td>Request/response format</td>
+                                <td>JSON</td>
+                            </tr>
                         </tbody>
                     </table>
                 </section>
                 <!-- END Connecting -->
-
                 <!-- Authentication -->
                 <section>
                     <h2 id="auth">Authentication</h2>
-                    <p>Each request must be authenticated by the use of a <i>token</i>.
-                    To obtain your token, please contact your account manager at Netigate.</p>
+                    <p>
+                        Each request must be authenticated by the use of a <i>token</i>.
+                        To obtain your token, please contact your account manager at Netigate.
+                    </p>
                     <p>The token is provided with an HTTP header called <code>X-API-KEY</code>.</p>
                     <pre class="line-numbers"><code><b>X-API-KEY:</b> zdfh7hghjfj326hk2hk85h4k9gnm9v5bn</code></pre>
                 </section>
                 <!-- END Authentication -->
-
+            </section>
+            <!-- END General -->
+            <!-- Services -->
+            <section>
+                <h1 id="services">Services</h1>
                 <!-- Surveys -->
                 <section>
                     <h2 id="surveys">Surveys</h2>
@@ -209,7 +233,7 @@
                         <h4 id="ssec-ListSurveys">Listing Surveys</h4>
                         <p>List all Surveys in an account.</p>
 
-                        <br/>
+                        <br />
 
                         <div class="tabs tabs-text">
 
@@ -261,14 +285,14 @@
                     </section>
                     <!-- END ListSurveys -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- GetSurvey -->
                     <section id="sec-GetSurvey">
                         <h4 id="ssec-GetSurvey">Retrieving a Survey</h4>
                         <p>Retrieve a specific Survey.</p>
 
-                        <br/>
+                        <br />
 
                         <div class="tabs tabs-text">
 
@@ -322,8 +346,6 @@
 
                 </section>
                 <!-- END Surveys -->
-
-
                 <!-- Questions -->
                 <section>
                     <h2 id="questions">Questions</h2>
@@ -386,8 +408,6 @@
                     <!-- END ListQuestions -->
                 </section>
                 <!-- END Questions -->
-
-
                 <!-- Answers -->
                 <section>
                     <h2 id="answers">Answers</h2>
@@ -449,7 +469,7 @@
                     </section>
                     <!-- END ListAnswerSets -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- GetAnswerSet -->
                     <section id="sec-GetAnswerSet">
@@ -569,8 +589,6 @@
 
                 </section>
                 <!-- END Answers -->
-
-
                 <!-- Sendouts -->
                 <section>
                     <h2 id="sendouts">Sendouts</h2>
@@ -632,7 +650,7 @@
                     </section>
                     <!-- END ListSendouts -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- GetSendout -->
                     <section id="sec-GetSendout">
@@ -691,7 +709,7 @@
                     </section>
                     <!-- END GetSendout -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- CreateSendout -->
                     <section id="sec-CreateSendout">
@@ -763,17 +781,17 @@
                                                 <tr>
                                                     <td>type</td>
                                                     <td>string</td>
-                                                    <td>Valid <a href="#enum-dispatch_type">DISPATCH_TYPE</a>.</td>
+                                                    <td>Valid <a href="#ntg-enum-dispatch_type">DISPATCH_TYPE</a>.</td>
                                                 </tr>
                                                 <tr>
                                                     <td>sendDate</td>
                                                     <td>string</td>
-                                                    <td><a href="#datatype-iso8601">ISO8601 date</a></td>
+                                                    <td>Send date in <a href="#ntg-type-iso8601">ISO8601 format</a>.</td>
                                                 </tr>
                                                 <tr>
                                                     <td>sender</td>
                                                     <td>string</td>
-                                                    <td>Valid <a href="#datatype-email-sender">email address</a> or <a href="#datatype-sms-sender">SMS sender</a>.</td>
+                                                    <td>Valid <a href="#ntg-type-email">email address</a> or <a href="#ntg-type-sms-sender">SMS sender</a>.</td>
                                                 </tr>
                                                 <tr>
                                                     <td>subject</td>
@@ -783,7 +801,7 @@
                                                 <tr>
                                                     <td>message</td>
                                                     <td>string</td>
-                                                    <td>Email body or SMS message, including survey link.</td>
+                                                    <td>Email body or SMS message, including survey link and optional opt-out link.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -819,7 +837,7 @@
                     </section>
                     <!-- END CreateSendout -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- ActivateSendout -->
                     <section id="sec-ActivateSendout">
@@ -880,7 +898,7 @@
                     </section>
                     <!-- END ActivateSendout -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- ListRespondents -->
                     <section id="sec-ListRespondents">
@@ -941,7 +959,7 @@
                     </section>
                     <!-- END ListRespondents -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- AddRespondent -->
                     <section id="sec-AddRespondent">
@@ -1008,12 +1026,12 @@
                                                 <tr>
                                                     <td>contactDetails</td>
                                                     <td>string</td>
-                                                    <td>Valid <a href="#datatype-email">email address</a> or <a href="#datatype-sms">SMS sender</a>.</td>
+                                                    <td>Valid <a href="#ntg-type-email">email address</a> or <a href="#ntg-type-sms-recipient">SMS recipient</a>.</td>
                                                 </tr>
                                                 <tr>
                                                     <td>backgroundData</td>
                                                     <td>dictionary</td>
-                                                    <td>(<i>Optional</i>) Key = BGDataLabelId, Value = Respondent's background data</td>
+                                                    <td>(<i>Optional</i>) Key = BGDataLabelId, Value = respondent's background data</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1049,7 +1067,7 @@
                     </section>
                     <!-- END AddRespondent -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- ListReminders -->
                     <section id="sec-ListReminders">
@@ -1110,7 +1128,7 @@
                     </section>
                     <!-- END ListReminders -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- CreateReminder -->
                     <section id="sec-CreateReminder">
@@ -1164,7 +1182,44 @@
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateReminder">
-                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>sendoutLogic</td>
+                                                    <td>string</td>
+                                                    <td>Valid <a href="#ntg-enum-sendout_logic">SENDOUT_LOGIC</a> describing whom will receive the reminder.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendDate</td>
+                                                    <td>string</td>
+                                                    <td>Send date in <a href="#ntg-type-iso8601">ISO8601 format</a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sender</td>
+                                                    <td>string</td>
+                                                    <td>Valid <a href="#ntg-type-email">email address</a> or <a href="#ntg-type-sms-sender">SMS sender</a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>subject</td>
+                                                    <td>string</td>
+                                                    <td>Optional for SMS.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>message</td>
+                                                    <td>string</td>
+                                                    <td>Email body or SMS message, including survey link.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1196,7 +1251,7 @@
                     </section>
                     <!-- END CreateReminder -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- ListBackgroundLabels -->
                     <section id="sec-ListBackgroundLabels">
@@ -1257,7 +1312,7 @@
                     </section>
                     <!-- END ListBackgroundLabels -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- CreateBackgroundLabel -->
                     <section id="sec-CreateBackgroundLabel">
@@ -1311,7 +1366,29 @@
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateBackgroundLabel">
-                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>name</td>
+                                                    <td>string</td>
+                                                    <td>Name of the background data label.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>labelType</td>
+                                                    <td>string</td>
+                                                    <td>Valid <a href="#ntg-enum-label_type">LABEL_TYPE</a>.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1344,7 +1421,6 @@
                     <!-- END CreateBackgroundLabel -->
                 </section>
                 <!-- END Sendouts -->
-
                 <!-- Categories -->
                 <section>
                     <h2 id="categories">Categories</h2>
@@ -1408,7 +1484,7 @@
                     </section>
                     <!-- END ListCategories -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- GetCategory -->
                     <section id="sec-GetCategory">
@@ -1469,7 +1545,7 @@
                     </section>
                     <!-- END GetCategory -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- CreateCategory -->
                     <section id="sec-CreateCategory">
@@ -1523,7 +1599,24 @@
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateCategory">
-                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>name</td>
+                                                    <td>string</td>
+                                                    <td>Name of the Category.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1554,95 +1647,8 @@
                         </div>
                     </section>
                     <!-- END CreateCategory -->
-
-                    <hr/>
-
-                    <!-- UpdateCategory -->
-                    <section id="sec-UpdateCategory">
-                        <h4 id="ssec-UpdateCategory">Updating a Category</h4>
-                        <p>Update a Category.</p>
-
-                        <br />
-
-                        <!-- Request -->
-                        <div class="tabs tabs-text">
-
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#req-UpdateCategory" aria-controls="home" role="tab" data-toggle="tab">Request</a>
-                                </li>
-                                <li role="presentation">
-                                    <a href="#desc-req-UpdateCategory" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
-                                </li>
-                            </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="req-UpdateCategory">
-                                    <pre class="line-numbers"><code class="ntg-http-request">PUT /accounts/categories</code></pre>
-                                </div>
-
-                                <div role="tabpanel" class="tab-pane" id="desc-req-UpdateCategory">
-                                    <pre class="line-numbers"><code>No description.</code></pre>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Request body -->
-                        <div class="tabs tabs-text">
-
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#reqb-UpdateCategory" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
-                                </li>
-                                <li role="presentation">
-                                    <a href="#desc-reqb-UpdateCategory" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
-                                </li>
-                            </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="reqb-UpdateCategory">
-                                    <pre class="line-numbers" data-src="assets/json/UpdateCategory.request.json"></pre>
-                                </div>
-
-                                <div role="tabpanel" class="tab-pane" id="desc-reqb-UpdateCategory">
-                                    <pre class="line-numbers"><code>No description.</code></pre>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Response -->
-                        <div class="tabs tabs-text">
-
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#resp-UpdateCategory" aria-controls="home" role="tab" data-toggle="tab">Response</a>
-                                </li>
-                                <li role="presentation">
-                                    <a href="#desc-resp-UpdateCategory" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
-                                </li>
-                            </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="resp-UpdateCategory">
-                                    <pre class="line-numbers" data-src="assets/json/UpdateCategory.response.json"></pre>
-                                </div>
-
-                                <div role="tabpanel" class="tab-pane" id="desc-resp-UpdateCategory">
-                                    <pre class="line-numbers"><code>No description.</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- END UpdateCategory -->
                 </section>
                 <!-- END Categories -->
-
                 <!-- Users -->
                 <section>
                     <h2 id="users">Users</h2>
@@ -1706,7 +1712,7 @@
                     </section>
                     <!-- END ListUsers -->
 
-                    <hr/>
+                    <hr />
 
                     <!-- GetUser -->
                     <section id="sec-GetUser">
@@ -1768,7 +1774,6 @@
                     <!-- END GetUser -->
                 </section>
                 <!-- END Users -->
-
                 <!-- Misc -->
                 <section>
                     <h2 id="misc">Misc</h2>
@@ -1833,137 +1838,112 @@
                     <!-- END ListBlocks -->
                 </section>
                 <!-- END Misc -->
+            </section>
+            <!-- END Services -->
 
-                <!-- Dummy -->
+            <!-- Types and enums -->
+            <section>
+                <h1 id="types-enums">Types and enums</h1>
+
+                <!-- Types -->
                 <section>
-                    <h2 id="Dummy">Dummy</h2>
+                    <h2 id="types">Types</h2>
 
-                    <!-- DummyMethod -->
-                    <section id="sec-DummyMethod">
-                        <h4 id="ssec-DummyMethod">Listing AnswerSets</h4>
-                        <p>List all AnswerSets in a survey.</p>
-
-                        <br />
-
-                        <!-- Request -->
-                        <div class="tabs tabs-text">
-
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#req-DummyMethod" aria-controls="home" role="tab" data-toggle="tab">Request</a>
-                                </li>
-                                <li role="presentation">
-                                    <a href="#desc-req-DummyMethod" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
-                                </li>
-                            </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="req-DummyMethod">
-                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/answers</code></pre>
-                                </div>
-
-                                <div role="tabpanel" class="tab-pane" id="desc-req-DummyMethod">
-                                    <pre class="line-numbers"><code>No description.</code></pre>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Request body -->
-                        <div class="tabs tabs-text">
-
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#reqb-DummyMethod" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
-                                </li>
-                                <li role="presentation">
-                                    <a href="#desc-reqb-DummyMethod" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
-                                </li>
-                            </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="reqb-DummyMethod">
-                                    <pre class="line-numbers"><code class="language-json">
-                                    </code></pre>
-                                </div>
-
-                                <div role="tabpanel" class="tab-pane" id="desc-reqb-DummyMethod">
-                                    <pre class="line-numbers"><code>No description.</code></pre>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Response -->
-                        <div class="tabs tabs-text">
-
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#resp-DummyMethod" aria-controls="home" role="tab" data-toggle="tab">Response</a>
-                                </li>
-                                <li role="presentation">
-                                    <a href="#desc-resp-DummyMethod" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
-                                </li>
-                            </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active in" id="resp-DummyMethod">
-                                    <pre class="line-numbers"><code class="language-json">
-                                    </code></pre>
-                                </div>
-
-                                <div role="tabpanel" class="tab-pane" id="desc-resp-DummyMethod">
-                                    <pre class="line-numbers"><code>No description.</code></pre>
-                                </div>
-                            </div>
-                        </div>
+                    <section id="sec-type-iso8601">
+                        <h4 id="ntg-type-iso8601">ISO 8601</h4>
+                        <p>
+                            All dates are referenced to UTC, and specified according to <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>.
+                            <pre class="line-numbers"><code>2016-09-27T15:38:26Z</code></pre>
+                        </p>
                     </section>
-                    <!-- END DummyMethod -->
+
+                    <hr />
+
+                    <section id="sec-type-iso6393">
+                        <h4 id="ntg-type-iso6393">ISO 639-3</h4>
+                        <p>All languages are specified according to <a href="https://en.wikipedia.org/wiki/ISO_639-3" target="_blank">ISO 639-3</a>.</p>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-type-sms-sender">
+                        <h4 id="ntg-type-sms-sender">SMS sender</h4>
+                        <p>Maximum of 11 characters. Only a-z, A-Z and 0-9 allowed.</p>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-type-sms-recipient">
+                        <h4 id="ntg-type-sms-recipient">SMS recipient</h4>
+                        <p>Maximum of 15 digits, formatted  with the country code first, i.e. 46735123456</p>
+                    </section>
                 </section>
-                <!-- END Dummy -->
-            </article>
-            <!-- END Main content -->
-        </main>
+                <!-- END Types -->
 
-        <!-- Footer -->
-        <footer class="site-footer">
-            <div class="container-fluid">
-                <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+                <!-- Enums -->
+                <section>
+                    <h2 id="enums">Enums</h2>
 
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <p>Copyright &copy; 2015. All right reserved</p>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <ul class="footer-menu">
-                            <li><a href="page_changelog.html">Changelog</a></li>
-                            <li><a href="page_credits.html">Credits</a></li>
-                            <li><a href="mailto:info@netigate.net">Contact us</a></li>
-                        </ul>
-                    </div>
+                    <section id="sec-enum-dispatch_type">
+                        <h4 id="ntg-enum-dispatch_type">DISPATCH_TYPE</h4>
+                        <pre class="line-numbers" data-src="assets/cs/enum/DispatchType.cs"></pre>
+                    </section>
+
+                    <hr/>
+
+                    <section id="sec-enum-sendout_logic">
+                        <h4 id="ntg-enum-sendout_logic">SENDOUT_LOGIC</h4>
+                        <pre class="line-numbers" data-src="assets/cs/enum/SendoutLogic.cs"></pre>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-enum-label_type">
+                        <h4 id="ntg-enum-label_type">LABEL_TYPE</h4>
+                        <pre class="line-numbers" data-src="assets/cs/enum/LabelType.cs"></pre>
+                    </section>
+                </section>
+                <!-- END Enums -->
+            </section>
+            <!-- END Types and enums -->
+
+        </article>
+        <!-- END Main content -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container-fluid">
+            <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <p>Copyright &copy; 2015. All right reserved</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="footer-menu">
+                        <li><a href="page_changelog.html">Changelog</a></li>
+                        <li><a href="page_credits.html">Credits</a></li>
+                        <li><a href="mailto:info@netigate.net">Contact us</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-        <!-- END Footer -->
+        </div>
+    </footer>
+    <!-- END Footer -->
+    <!-- Scripts -->
+    <script src="assets/vendors/jquery/jquery.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/clipboard.js/clipboard.min.js"></script>
+    <script src="assets/vendors/lity/lity.min.js"></script>
+    <script src="assets/vendors/jquery.slimscroll.min.js"></script>
+    <script src="assets/vendors/matchHeight.min.js"></script>
+    <script src="assets/js/prism-aspnet-csharp-css-http-json-linenum-lang-file.min.js"></script>
 
-        <!-- Scripts -->
-        <script src="assets/vendors/jquery/jquery.min.js"></script>
-        <!--<script src="assets/js/json-samples.js"></script>-->
-        <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/vendors/clipboard.js/clipboard.min.js"></script>
-        <script src="assets/vendors/lity/lity.min.js"></script>
-        <script src="assets/vendors/jquery.slimscroll.min.js"></script>
-        <script src="assets/vendors/matchHeight.min.js"></script>
-        <script src="assets/js/prism-aspnet-csharp-css-http-json-linenum-lang-file.min.js"></script>
+    <script src="assets/js/theDocs.ntgt.js"></script>
+    <script src="assets/js/custom.js"></script>
 
-        <script src="assets/js/theDocs.ntgt.js"></script>
-        <script src="assets/js/custom.js"></script> 
-
-        <!-- Fix them apples -->
-        <script type="text/javascript" src="assets/js/retina.min.js"></script>
-    </body>
+    <!-- Fix them apples -->
+    <script type="text/javascript" src="assets/js/retina.min.js"></script>
+</body>
 </html>
