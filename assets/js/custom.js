@@ -13,6 +13,4 @@ $(function () {
     $(".ntg-http-request").each(function () {
         $(this).html(emphasizeHTTP($(this).html()));
     });
-
-    $("#ex-intro").load("assets/json/intro.json");
 })(jQuery);
