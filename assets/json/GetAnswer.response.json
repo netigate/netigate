@@ -7,7 +7,7 @@
         "QuestionType":"String content",
         "QuestionText":"String content",
         "AnswerText":"String content",
-        "AnswerNumeric":2147483647
+        "AnswerNumeric":2147483647,
         "AnswerWeight":2147483647
     }, 
     {
@@ -18,7 +18,7 @@
         "QuestionType":"String content",
         "QuestionText":"String content",
         "AnswerText":"String content",
-        "AnswerNumeric":2147483647
+        "AnswerNumeric":2147483647,
         "AnswerWeight":2147483647
     }, 
 ]

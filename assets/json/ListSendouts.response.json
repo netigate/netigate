@@ -12,15 +12,18 @@
             "SendoutLogic":"String content",
             "Activated":true
         },
-        "Reminders":[{
-            "DispatchId":2147483647,
-            "Name":"String content",
-            "SendDate":"2016-06-15T13:00:00Z",
-            "DoneDate":null,
-            "DispatchType":"String content",
-            "SendoutType":"String content",
-            "SendoutLogic":"String content",
-            "Activated":false
-        }]
+        "Reminders":
+        [
+            {
+                "DispatchId":2147483647,
+                "Name":"String content",
+                "SendDate":"2016-06-15T13:00:00Z",
+                "DoneDate":null,
+                "DispatchType":"String content",
+                "SendoutType":"String content",
+                "SendoutLogic":"String content",
+                "Activated":false
+            }
+        ]
     }
 ]

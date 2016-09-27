@@ -14,7 +14,8 @@
         "EndDate":"2016-09-30T12:00:00Z", 
         "Category":"1033", 
         "Activated":"true"
-    }, {
+    }, 
+    {
         "SurveyId":"12347", 
         "Name":"Coffee cupping @ HQ (internal)", 
         "StartDate":"2016-10-14T12:00:00Z", 
