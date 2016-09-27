@@ -1,9 +1,9 @@
 ﻿enum SendoutLogic
 {
-    ALL = 1,
-    NOT_SENT = 2,
-    NOT_ACCESSED = 3,
-    NOT_COMPLETED = 4,
-    COMPLETED = 5,
-    VISITED_NOT_COMPLETED = 6
+    ALL,
+    NOT_SENT,
+    NOT_ACCESSED,
+    NOT_COMPLETED,
+    COMPLETED,
+    VISITED_NOT_COMPLETED
 }
