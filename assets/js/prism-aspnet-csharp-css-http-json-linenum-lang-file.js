@@ -908,7 +908,8 @@ Prism.hooks.add('complete', function (env) {
 			'sh': 'bash',
 			'bat': 'batch',
 			'h': 'c',
-			'tex': 'latex'
+			'tex': 'latex',
+            'cs': 'csharp'
 		};
 
 		if(Array.prototype.forEach) { // Check to prevent error in IE8
