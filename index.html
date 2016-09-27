@@ -32,6 +32,7 @@
 
             <ul class="nav sidenav dropable sticky">
                 <li><a href="#intro">Intro</a></li>
+                <li><a href="#connecting">Connecting</a></li>
                 <li><a href="#auth">Authentication</a></li>
                 <li>
                     <a href="#surveys">Surveys</a>
@@ -158,13 +159,44 @@
                 </section>
                 <!-- END Intro -->
 
+                <!-- Connecting -->
+                <section>
+                    <h2 id="connecting">Connecting</h2>
+                    <table class="table">
+                        <caption>Connection parameters</caption>
+                        <tbody>
+                        <tr>
+                            <td>Base URL</td>
+                            <td>https://api.netigate.se/v2/NetigateAPI.svc</td>
+                        </tr>
+                        <tr>
+                            <td>Protocol</td>
+                            <td>HTTPS</td>
+                        </tr>
+                        <tr>
+                            <td>Port</td>
+                            <td>443</td>
+                        </tr>
+                        <tr>
+                            <td>Authentication</td>
+                            <td>Token in HTTP header</td>
+                        </tr>
+                        <tr>
+                            <td>Request/response format</td>
+                            <td>JSON</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- END Connecting -->
+
                 <!-- Authentication -->
                 <section>
                     <h2 id="auth">Authentication</h2>
                     <p>Each request must be authenticated by the use of a <i>token</i>.
                     To obtain your token, please contact your account manager at Netigate.</p>
                     <p>The token is provided with an HTTP header called <code>X-API-KEY</code>.</p>
-                    <pre class="line-numbers"><code>X-API-KEY: zdfh7hghjfj326hk2hk85h4k9gnm9v5bn</code></pre>
+                    <pre class="line-numbers"><code><b>X-API-KEY:</b> zdfh7hghjfj326hk2hk85h4k9gnm9v5bn</code></pre>
                 </section>
                 <!-- END Authentication -->
 
@@ -713,7 +745,49 @@
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqbody-CreateSendout">
-                                    <pre class="line-numbers"><code class="language-json">No description.</code></pre>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>name</td>
+                                                    <td>string</td>
+                                                    <td>Name of the Sendout.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>type</td>
+                                                    <td>string</td>
+                                                    <td>Valid <a href="#enum-dispatch_type">DISPATCH_TYPE</a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendDate</td>
+                                                    <td>string</td>
+                                                    <td><a href="#datatype-iso8601">ISO8601 date</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sender</td>
+                                                    <td>string</td>
+                                                    <td>Valid <a href="#datatype-email-sender">email address</a> or <a href="#datatype-sms-sender">SMS sender</a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>subject</td>
+                                                    <td>string</td>
+                                                    <td>Optional for SMS.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>message</td>
+                                                    <td>string</td>
+                                                    <td>Email body or SMS message, including survey link.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -921,7 +995,29 @@
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-reqb-AddRespondent">
-                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>contactDetails</td>
+                                                    <td>string</td>
+                                                    <td>Valid <a href="#datatype-email">email address</a> or <a href="#datatype-sms">SMS sender</a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>backgroundData</td>
+                                                    <td>dictionary</td>
+                                                    <td>(<i>Optional</i>) Key = BGDataLabelId, Value = Respondent's background data</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
