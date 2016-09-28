@@ -1,5 +1,5 @@
-﻿enum LabelType
+﻿PseudoEnum LabelType : string
 {
-    TEXT,
-    ORDINAL
+    "TEXT",
+    "ORDINAL"
 }
