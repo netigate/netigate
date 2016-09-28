@@ -1,5 +1,5 @@
-﻿enum DispatchType
+﻿PseudoEnum DispatchType : string
 {
-    EMAIL,
-    SMS
+    "EMAIL",
+    "SMS"
 }
