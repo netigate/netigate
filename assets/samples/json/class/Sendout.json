@@ -1,30 +1,30 @@
 ﻿{
-  "SendoutId": 2147483647,
-  "Survey": 2147483647,
-  "Primary": {
-    "DispatchId": 2147483647,
-    "Created": "String content",
-    "Sendout": 2147483647,
-    "Name": "String content",
-    "SendDate": "String content",
-    "DoneDate": "String content",
-    "DispatchType": "String content",
-    "SendoutType": "String content",
-    "SendoutLogic": "String content",
-    "Activated": true
-  },
-  "Reminders": [
-    {
-      "DispatchId": 2147483647,
-      "Created": "String content",
-      "Sendout": 2147483647,
-      "Name": "String content",
-      "SendDate": "String content",
-      "DoneDate": "String content",
-      "DispatchType": "String content",
-      "SendoutType": "String content",
-      "SendoutLogic": "String content",
-      "Activated": true
-    }
-  ]
+    "SendoutId": 2147483647,
+    "Survey": 2147483647,
+    "Primary": {
+        "DispatchId": 2147483647,
+        "Created": "String content",
+        "Sendout": 2147483647,
+        "Name": "String content",
+        "SendDate": "String content",
+        "DoneDate": "String content",
+        "DispatchType": "String content",
+        "SendoutType": "String content",
+        "SendoutLogic": "String content",
+        "Activated": true
+    },
+    "Reminders": [
+        {
+            "DispatchId": 2147483647,
+            "Created": "String content",
+            "Sendout": 2147483647,
+            "Name": "String content",
+            "SendDate": "String content",
+            "DoneDate": "String content",
+            "DispatchType": "String content",
+            "SendoutType": "String content",
+            "SendoutLogic": "String content",
+            "Activated": true
+        }
+    ]
 }

@@ -1,36 +1,36 @@
 [
-  {
-    "BGDataLabelId": 2147483647,
-    "Document": 2147483647,
-    "Name": "String content",
-    "Type": "String content",
-    "Options": [
-      {
-        "BGDataOptionId": 2147483647,
-        "Label": 2147483647,
-        "Option": "String content",
-        "Order": 2147483647
-      }
-    ]
-  },
-  {
-    "BGDataLabelId": 2147483647,
-    "Document": 2147483647,
-    "Name": "String content",
-    "Type": "String content",
-    "Options": [
-      {
-        "BGDataOptionId": 2147483647,
-        "Label": 2147483647,
-        "Option": "String content",
-        "Order": 2147483647
-      },
-      {
-        "BGDataOptionId": 2147483647,
-        "Label": 2147483647,
-        "Option": "String content",
-        "Order": 2147483647
-      }
-    ]
-  }
+    {
+        "BGDataLabelId": 2147483647,
+        "Document": 2147483647,
+        "Name": "String content",
+        "Type": "String content",
+        "Options": [
+            {
+                "BGDataOptionId": 2147483647,
+                "Label": 2147483647,
+                "Option": "String content",
+                "Order": 2147483647
+            }
+        ]
+    },
+    {
+        "BGDataLabelId": 2147483647,
+        "Document": 2147483647,
+        "Name": "String content",
+        "Type": "String content",
+        "Options": [
+            {
+                "BGDataOptionId": 2147483647,
+                "Label": 2147483647,
+                "Option": "String content",
+                "Order": 2147483647
+            },
+            {
+                "BGDataOptionId": 2147483647,
+                "Label": 2147483647,
+                "Option": "String content",
+                "Order": 2147483647
+            }
+        ]
+    }
 ]

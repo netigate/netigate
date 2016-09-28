@@ -1,22 +1,22 @@
 ﻿{
-  "UserId": 2147483647,
-  "Created": "String content",
-  "Account": 2147483647,
-  "Name": "String content",
-  "Email": "String content",
-  "ExpiryDate": "String content",
-  "Language": "String content",
-  "FolderPermission": [
-    {
-      "Key": "String content",
-      "Value": "String content"
-    }
-  ],
-  "SurveyPermission": [
-    {
-      "Key": "String content",
-      "Value": "String content"
-    }
-  ],
-  "AnonymousAnswers": true
+    "UserId": 2147483647,
+    "Created": "String content",
+    "Account": 2147483647,
+    "Name": "String content",
+    "Email": "String content",
+    "ExpiryDate": "String content",
+    "Language": "String content",
+    "FolderPermission": [
+        {
+            "Key": "String content",
+            "Value": "String content"
+        }
+    ],
+    "SurveyPermission": [
+        {
+            "Key": "String content",
+            "Value": "String content"
+        }
+    ],
+    "AnonymousAnswers": true
 }

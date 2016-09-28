@@ -1,8 +1,8 @@
 {
-    "name":"", 
-    "type":"", 
-    "sendDate":"", 
-    "sender":"", 
-    "subject":"", 
-    "message":""
+        "name":"", 
+        "type":"", 
+        "sendDate":"", 
+        "sender":"", 
+        "subject":"", 
+        "message":""
 }
