@@ -1,8 +1,17 @@
 {
-    "contactDetails":"foo@bar.com", 
-    "backgroundData": {
-        12345:"Value1",     
-        12346:"Value2", 
-        12347:"Value3"
+  "contactDetails": "foo@bar.com",
+  "backgroundData": [
+    {
+      "Key": "12345",
+      "Value": "Value1"
+    },
+    {
+      "Key": "12346",
+      "Value": "Value2"
+    },
+    {
+      "Key": "12347",
+      "Value": "Value3"
     }
+  ]
 }
