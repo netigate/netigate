@@ -1,0 +1,20 @@
+[
+    {
+        "AnswerSetId": 2147483647,
+        "Created": "String content",
+        "Survey": 2147483647,
+        "Respondent": 2147483647,
+        "Completed": "String content",
+        "Updated": "String content",
+        "Answers": []
+    },
+    {
+        "AnswerSetId": 2147483647,
+        "Created": "String content",
+        "Survey": 2147483647,
+        "Respondent": 2147483647,
+        "Completed": "String content",
+        "Updated": "String content",
+        "Answers": []
+    }
+]
