@@ -1,5 +1,6 @@
 ﻿PseudoEnum DispatchType : string
 {
     "EMAIL",
-    "SMS"
+    "SMS",
+    "LOGIN"
 }
