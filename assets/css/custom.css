@@ -1,21 +1,21 @@
 .banner .auto-size {
-	background-color:#fff;
+    background-color:#fff;
 }
 
 #li {
-	color: #fff;
+    color: #fff;
 }
 
 #li.active {
-	background-color:#2c3e50;
+    background-color:#2c3e50;
 }
 
 .language-name {
-	display: none;
+    display: none;
 }
 
 .banner {
-	background-color: #1795ca;
+    background-color: #1795ca;
 }
 
 .sidebar-version-list {
