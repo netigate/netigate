@@ -5,6 +5,7 @@ function emphasizeHTTP(str) {
     // Emphasize URL parameters.
     //s = s.replace("&lt;", "&lt;<i>").replace("&gt;", "</i>&gt;");
     str = str.replace(/&lt;([^&]+)&gt;/ig, "&lt;<i>$1</i>&gt;");
+    str = str.replace(/(\[[^\]]+\])/ig, "<i>$1</i>");
 
     return str;
 }

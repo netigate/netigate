@@ -17,3 +17,33 @@
 .banner {
 	background-color: #1795ca;
 }
+
+.sidebar-version-list {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sidebar-version-list a {
+    color: #aeb2b7;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.sidebar-version-list a:hover {
+    color: #1795ca;
+    text-decoration: none;
+}
+
+.sidebar-version-list a:focus {
+    color: white;
+}
+
+.sidebar-version-list-active {
+    color: white !important;
+    font-weight: 700;
+}
+
+.req-parameter-mandatory {
+    font-weight: bold;
+}

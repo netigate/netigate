@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Netigate REST API</title>
+
+    <!-- Styles -->
+    <link href="../assets/css/theDocs.all.css?v=1" rel="stylesheet">
+    <link href="../assets/css/custom.css?v=1" rel="stylesheet">
+    <link href="../assets/css/netapi.css?v=1" rel="stylesheet">
+    <link href="../assets/css/prism-okaidia.css?v=1" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet" type="text/css">
+
+    <!-- Favicons -->
+    <!--<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+    <link rel="icon" href="../assets/img/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
+
+    <!-- Sidebar -->
+    <aside class="sidebar sidebar-boxed sidebar-dark">
+
+        <a class="sidebar-brand" href="index.html">
+            <img src="../assets/img/logo-sidebar.png" alt="logo">
+        </a>
+        
+        <span class="sidebar-version-list">
+            <a class="sidebar-version-list-active" href="#">1.0</a>
+            <a href="../v1.1/index.html">1.1</a>
+        </span>
+
+        <ul class="nav sidenav dropable sticky">
+            <li>
+                <a href="#general">General</a>
+                <ul>
+                    <li><a href="#connecting">Connecting</a></li>
+                    <li><a href="#auth">Authentication</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="services.html#services">Services</a>
+                <ul>
+                    <li>
+                        <a href="services.html#surveys">Surveys</a>
+                    </li>
+                    <li>
+                        <a href="services.html#questions">Questions</a>
+                    </li>
+                    <li>
+                        <a href="services.html#answers">Answers</a>
+                    </li>
+                    <li>
+                        <a href="services.html#sendouts">Sendouts</a>
+                    </li>
+                    <li>
+                        <a href="services.html#categories">Categories</a>
+                    </li>
+                    <li>
+                        <a href="services.html#users">Users</a>
+                    </li>
+                    <li>
+                        <a href="services.html#misc">Misc</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="types.html#types-enums">Types and enums</a>
+                <ul>
+                    <li>
+                        <a href="types.html#types">Types</a>
+                    </li>
+                    <li>
+                        <a href="types.html#enums">Enums</a>
+                    </li>
+                    <li>
+                        <a href="types.html#class">Classes</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <!-- END Sidebar -->
+
+    <header class="site-header navbar-transparent">
+
+        <!-- Top navbar & branding -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+                <!-- Toggle buttons and brand -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                        <span class="glyphicon glyphicon-option-vertical"></span>
+                    </button>
+
+                    <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <!-- END Toggle buttons and brand -->
+
+                <!-- Top navbar -->
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Documentation</a></li>
+                        <li><a href="http://netigate.net/success-center/" target="_blank">Success Center</a></li>
+                        <li class="hero"><a href="http://netigate.net/l/free-account/">Get your free account</a></li>
+                    </ul>
+                </div>
+                <!-- END Top navbar -->
+
+            </div>
+        </nav>
+        <!-- END Top navbar & branding -->
+
+        <!-- Banner -->
+        <div class="banner auto-size" style="background-color: #1795ca">
+            <div class="container-fluid text-white">
+                <h1><strong>Netigate REST API</strong> documentation</h1>
+                <h5>Connect your insights gathered from the premiere survey platform with the platforms you already use.</h5>
+            </div>
+        </div>
+        <!-- END Banner -->
+
+    </header>
+
+    <main class="container-fluid">
+
+        <!-- Main content -->
+        <article class="main-content" role="main">
+
+            <p class="lead">We are quite excited to present our new API.</p>
+
+            <!-- General -->
+            <section>
+                <h1 id="general">General</h1>
+
+                <!-- Connecting -->
+                <section>
+                    <h2 id="connecting">Connecting</h2>
+                    <table class="table">
+                        <caption>Connection parameters</caption>
+                        <tbody>
+                            <tr>
+                                <td>Base URLs</td>
+                                <td>https://www.netigate.se/api/v1<br/>https://www.ntgt.de/api/v1</td>
+                            </tr>
+                            <tr>
+                                <td>Protocol</td>
+                                <td>HTTPS</td>
+                            </tr>
+                            <tr>
+                                <td>Port</td>
+                                <td>443</td>
+                            </tr>
+                            <tr>
+                                <td>Authentication</td>
+                                <td>Token in HTTP header</td>
+                            </tr>
+                            <tr>
+                                <td>Technology</td>
+                                <td>REST</td>
+                            </tr>
+                            <tr>
+                                <td>Request/response format</td>
+                                <td>JSON</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- END Connecting -->
+
+                <!-- Authentication -->
+                <section>
+                    <h2 id="auth">Authentication</h2>
+                    <p>
+                        Each request must be authenticated by the use of a <i>token</i>.
+                        To obtain your token, please contact your account manager at Netigate.
+                    </p>
+                    <p>The token is provided with an HTTP header called <code>X-API-KEY</code>.</p>
+                    <pre class="line-numbers"><code><b>X-API-KEY:</b> zdfh7hghjfj326hk2hk85h4k9gnm9v5bn</code></pre>
+                </section>
+                <!-- END Authentication -->
+
+            </section>
+            <!-- END General -->
+
+        </article>
+        <!-- END Main content -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container-fluid">
+            <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <p>Copyright &copy; 2015. All right reserved</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="footer-menu">
+                        <li><a href="mailto:info@netigate.net">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END Footer -->
+
+    <!-- Scripts -->
+    <script src="../assets/vendors/jquery/jquery.min.js?v=1"></script>
+    <script src="../assets/vendors/bootstrap/js/bootstrap.min.js?v=1"></script>
+    <script src="../assets/vendors/clipboard.js/clipboard.min.js?v=1"></script>
+    <script src="../assets/vendors/lity/lity.min.js?v=1"></script>
+    <script src="../assets/vendors/jquery.slimscroll.min.js?v=1"></script>
+    <script src="../assets/vendors/matchHeight.min.js?v=1"></script>
+    <script src="../assets/js/prism-aspnet-csharp-css-http-json-linenum-lang-file.min.js?v=2"></script>
+
+    <script src="../assets/js/theDocs.ntgt.js?v=1"></script>
+    <script src="../assets/js/custom.js?v=1"></script>
+
+    <!-- Fix them apples -->
+    <script type="text/javascript" src="../assets/js/retina.min.js?v=1"></script>
+</body>
+</html>
