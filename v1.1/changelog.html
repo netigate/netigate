@@ -88,6 +88,8 @@
                 </ul>
             </li>
         </ul>
+        
+        <!--<ul class="nav sidenav dropable sticky">-->
         <ul class="nav sidenav">
             <li>
                 <a href="changelog.html">Changelog</a>
@@ -147,59 +149,16 @@
         <!-- Main content -->
         <article class="main-content" role="main">
 
-            <p class="lead">We are quite excited to present our new API.</p>
-
             <!-- General -->
             <section>
-                <h1 id="general">General</h1>
+                <h1 id="Changelog">Changelog</h1>
 
-                <!-- Connecting -->
+                <!-- Changelog -->
                 <section>
-                    <h2 id="connecting">Connecting</h2>
-                    <table class="table">
-                        <caption>Connection parameters</caption>
-                        <tbody>
-                            <tr>
-                                <td>Base URLs</td>
-                                <td>https://www.netigate.se/api/v1.1<br/>https://www.ntgt.de/api/v1.1</td>
-                            </tr>
-                            <tr>
-                                <td>Protocol</td>
-                                <td>HTTPS</td>
-                            </tr>
-                            <tr>
-                                <td>Port</td>
-                                <td>443</td>
-                            </tr>
-                            <tr>
-                                <td>Authentication</td>
-                                <td>Token in HTTP header</td>
-                            </tr>
-                            <tr>
-                                <td>Technology</td>
-                                <td>REST</td>
-                            </tr>
-                            <tr>
-                                <td>Request/response format</td>
-                                <td>JSON</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <!--<h2 id="changelog-v11">v1.1 - 2017-05-22</h2>-->
+                    <pre class="line-numbers" data-src="../assets/changelog.txt"></pre>
                 </section>
-                <!-- END Connecting -->
-
-                <!-- Authentication -->
-                <section>
-                    <h2 id="auth">Authentication</h2>
-                    <p>
-                        Each request must be authenticated by the use of a <i>token</i>.
-                        To obtain your token, please contact your account manager at Netigate.
-                    </p>
-                    <p>The token is provided with an HTTP header called <code>X-API-KEY</code>.</p>
-                    <pre class="line-numbers"><code><b>X-API-KEY:</b> zdfh7hghjfj326hk2hk85h4k9gnm9v5bn</code></pre>
-                </section>
-                <!-- END Authentication -->
-
+                <!-- END Changelog -->
             </section>
             <!-- END General -->
 

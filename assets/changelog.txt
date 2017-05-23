@@ -1,0 +1,28 @@
+NetigateRESTAPI-1.1
+2017-05-22
+
+Services:
+- Answers: 
+  Added date and state filtering to the ListAnswerSets service 
+  using query string parameters ('from', 'to', 'updated' and 'completed').
+  Use 'from' and 'to' to get answers created within a date range.
+  Use 'updated' to get answers that have been updated since a specified date.
+  Use 'completed' to indicate whether to only get complete AnswerSets, or 
+  to include partial AnswerSets.
+  Remarks: 'updated' cannot be used in conjunction with 'from' and 'to'.
+  'completed' can be used in conjunction with 'from', 'to' and 'completed'.
+
+- Sendouts:
+  Added support for two-way sendouts.
+
+Classes:
+- QuestionItem: Added the attribute BackgroundLabel to the QuestionItem class. 
+  It indicates whether it's a background data question or not, and which
+  background data label it connects to.
+
+--------------------------------------------------------------------------------
+
+NetigateRESTAPI-1.0
+2016-10-11
+
+Initial release of the Netigate REST API.
