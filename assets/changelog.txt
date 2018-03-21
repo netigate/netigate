@@ -10,7 +10,7 @@ Services:
   Use 'completed' to indicate whether to only get complete AnswerSets, or 
   to include partial AnswerSets.
   Remarks: 'updated' cannot be used in conjunction with 'from' and 'to'.
-  'completed' can be used in conjunction with 'from', 'to' and 'completed'.
+  'completed' can be used in conjunction with 'from' and 'to'.
 
 - Sendouts:
   Added support for two-way sendouts.
