@@ -1,6 +1,6 @@
-﻿public class RespondentRequest
+﻿class RespondentRequest
 {
-    public string contactDetails;
-    public Dictionary<int, string> backgroundData;
-    public bool sendMail;
+    string contactDetails;
+    Dictionary<int, string> backgroundData;
+    bool sendMail;
 }
