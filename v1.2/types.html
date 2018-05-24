@@ -1,0 +1,699 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Netigate REST API</title>
+
+    <!-- Styles -->
+    <link href="../assets/css/theDocs.all.css?v=1" rel="stylesheet">
+    <link href="../assets/css/custom.css?v=1" rel="stylesheet">
+    <link href="../assets/css/netapi.css?v=1" rel="stylesheet">
+    <link href="../assets/css/prism-okaidia.css?v=1" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet" type="text/css">
+
+    <!-- Favicons -->
+    <!--<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+    <link rel="icon" href="../assets/img/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
+
+    <!-- Sidebar -->
+    <aside class="sidebar sidebar-boxed sidebar-dark">
+
+        <a class="sidebar-brand" href="index.html"><img src="../assets/img/logo-sidebar.png" alt="logo"></a>
+        
+        <span class="sidebar-version-list">
+            <a href="../v1/index.html">1.0</a>
+            <a href="../v1.1/index.html">1.1</a>
+            <a class="sidebar-version-list-active" href="#">1.2</a>
+        </span>
+
+        <ul class="nav sidenav dropable sticky">
+            <li>
+                <a href="index.html#general">General</a>
+                <ul>
+                    <li><a href="index.html#connecting">Connecting</a></li>
+                    <li><a href="index.html#auth">Authentication</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="services.html#services">Services</a>
+                <ul>
+                    <li>
+                        <a href="services.html#surveys">Surveys</a>
+                    </li>
+                    <li>
+                        <a href="services.html#questions">Questions</a>
+                    </li>
+                    <li>
+                        <a href="services.html#answers">Answers</a>
+                    </li>
+                    <li>
+                        <a href="services.html#sendouts">Sendouts</a>
+                    </li>
+                    <li>
+                        <a href="services.html#categories">Categories</a>
+                    </li>
+                    <li>
+                        <a href="services.html#users">Users</a>
+                    </li>
+                    <li>
+                        <a href="services.html#misc">Misc</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#types-enums">Types and enums</a>
+                <ul>
+                    <li>
+                        <a href="#types">Types</a>
+                    </li>
+                    <li>
+                        <a href="#enums">Enums</a>
+                    </li>
+                    <li>
+                        <a href="#class">Classes</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav sidenav">
+            <li>
+                <a href="changelog.html#Changelog">Changelog</a>
+            </li>
+        </ul>
+    </aside>
+    <!-- END Sidebar -->
+
+    <header class="site-header navbar-transparent">
+
+        <!-- Top navbar & branding -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+                <!-- Toggle buttons and brand -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                        <span class="glyphicon glyphicon-option-vertical"></span>
+                    </button>
+
+                    <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <!-- END Toggle buttons and brand -->
+
+                <!-- Top navbar -->
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Documentation</a></li>
+                        <li><a href="http://netigate.net/success-center/" target="_blank">Success Center</a></li>
+                        <li class="hero"><a href="http://netigate.net/l/free-account/">Get your free account</a></li>
+                    </ul>
+                </div>
+                <!-- END Top navbar -->
+
+            </div>
+        </nav>
+        <!-- END Top navbar & branding -->
+
+        <!-- Banner -->
+        <div class="banner auto-size" style="background-color: #1795ca">
+            <div class="container-fluid text-white">
+                <h1><strong>Netigate REST API</strong> documentation</h1>
+                <h5>Connect your insights gathered from the premiere survey platform with the platforms you already use.</h5>
+            </div>
+        </div>
+        <!-- END Banner -->
+
+    </header>
+
+    <main class="container-fluid">
+
+        <!-- Main content -->
+        <article class="main-content" role="main">
+
+            <p class="lead">We are quite excited to present our new API.</p>
+
+            <!-- Types and enums -->
+            <section>
+                <h1 id="types-enums">Types and enums</h1>
+
+                <!-- Types -->
+                <section>
+                    <h2 id="types">Types</h2>
+
+                    <section id="sec-type-iso8601">
+                        <h4 id="ntg-type-iso8601">ISO 8601 dates</h4>
+                        <p>
+                            All dates are referenced to UTC, and specified according to <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>.
+                            <pre class="line-numbers"><code>2016-09-27T15:38:26Z</code></pre>
+                        </p>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-type-iso6393">
+                        <h4 id="ntg-type-iso6393">ISO 639-3 language codes</h4>
+                        <p>All languages are specified according to <a href="https://en.wikipedia.org/wiki/ISO_639-3" target="_blank">ISO 639-3</a>.</p>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-type-sms-sender">
+                        <h4 id="ntg-type-sms-sender">SMS sender</h4>
+                        <p>Maximum of 11 characters. Only a-z, A-Z and 0-9 allowed.</p>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-type-sms-recipient">
+                        <h4 id="ntg-type-sms-recipient">SMS recipient</h4>
+                        <p>Maximum of 15 digits, formatted  with the country code first, i.e. 46735123456</p>
+                    </section>
+                </section>
+                <!-- END Types -->
+
+                <!-- Enums -->
+                <section>
+                    <h2 id="enums">Enums</h2>
+
+                    <section id="sec-enum-dispatch_type">
+                        <h4 id="ntg-enum-dispatch_type">DispatchType</h4>
+                        <pre class="line-numbers" data-src="assets/samples/cs/enum/DispatchType.cs"></pre>
+                    </section>
+
+                    <hr/>
+
+                    <section id="sec-enum-sendout_logic">
+                        <h4 id="ntg-enum-sendout_logic">SendoutLogic</h4>
+                        <pre class="line-numbers" data-src="../assets/samples/cs/enum/SendoutLogic.cs"></pre>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-enum-label_type">
+                        <h4 id="ntg-enum-label_type">LabelType</h4>
+                        <pre class="line-numbers" data-src="../assets/samples/cs/enum/LabelType.cs"></pre>
+                    </section>
+                </section>
+                <!-- END Enums -->
+
+                <!-- Classes -->
+                <section>
+                    <h2 id="class">Classes</h2>
+
+                    <section id="sec-class-answer">
+                        <h4 id="ntg-class-answer">Answer</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-answer-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-answer-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-answer-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/Answer.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-answer-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/Answer.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr/>
+
+                    <section id="sec-class-answerset">
+                        <h4 id="ntg-class-answerset">AnswerSet</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-answerset-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-answerset-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-answerset-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/AnswerSet.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-answerset-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/AnswerSet.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-backgrounddatalabel">
+                        <h4 id="ntg-class-backgrounddatalabel">BackgroundDataLabel</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-backgrounddatalabel-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-backgrounddatalabel-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-backgrounddatalabel-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/BackgroundDataLabel.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-backgrounddatalabel-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/BackgroundDataLabel.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-backgrounddataoption">
+                        <h4 id="ntg-class-backgrounddataoption">BackgroundDataOption</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-backgrounddataoption-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-backgrounddataoption-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-backgrounddataoption-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/BackgroundDataOption.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-backgrounddataoption-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/BackgroundDataOption.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-block">
+                        <h4 id="ntg-class-block">Block</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-block-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-block-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-block-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/Block.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-block-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/Block.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-category">
+                        <h4 id="ntg-class-category">Category</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-category-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-category-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-category-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/Category.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-category-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/Category.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-dispatch">
+                        <h4 id="ntg-class-dispatch">Dispatch</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-dispatch-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-dispatch-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-dispatch-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/Dispatch.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-dispatch-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/Dispatch.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-question">
+                        <h4 id="ntg-class-question">Question</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-question-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-question-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-question-json">
+                                    <pre class="line-numbers" data-src="assets/samples/json/class/Question.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-question-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/Question.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-questionitem">
+                        <h4 id="ntg-class-questionitem">QuestionItem</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-questionitem-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-questionitem-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-questionitem-json">
+                                    <pre class="line-numbers" data-src="assets/samples/json/class/QuestionItem.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-questionitem-csharp">
+                                    <pre class="line-numbers" data-src="assets/samples/cs/class/QuestionItem.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-questionitemalternative">
+                        <h4 id="ntg-class-questionitemalternative">QuestionItemAlternative</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-questionitemalternative-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-questionitemalternative-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-questionitemalternative-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/QuestionItemAlternative.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-questionitemalternative-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/QuestionItemAlternative.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-respondent">
+                        <h4 id="ntg-class-respondent">Respondent</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-respondent-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-respondent-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-respondent-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/Respondent.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-respondent-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/Respondent.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-sendout">
+                        <h4 id="ntg-class-sendout">Sendout</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-sendout-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-sendout-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-sendout-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/Sendout.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-sendout-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/Sendout.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-survey">
+                        <h4 id="ntg-class-survey">Survey</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-survey-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-survey-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-survey-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/class/Survey.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-survey-csharp">
+                                    <pre class="line-numbers" data-src="../assets/samples/cs/class/Survey.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-class-user">
+                        <h4 id="ntg-class-user">User</h4>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-class-user-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#ntg-class-user-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-class-user-json">
+                                    <pre class="line-numbers" data-src="assets/samples/json/class/User.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="ntg-class-user-csharp">
+                                    <pre class="line-numbers" data-src="assets/samples/cs/class/User.cs"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+				
+				
+				<hr />
+				
+				<section id="sec-class-respondentrequest">
+				
+				<h4 id="ntg-class-respondentrequest">RespondentRequest</h4>
+				
+					<div class="tabs tabs-text">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#ntg-class-respondentrequest-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+							</li>
+							<li role="presentation">
+								<a href="#ntg-class-respondentrequest-csharp" aria-controls="profile" role="tab" data-toggle="tab">C#</a>
+							</li>
+						</ul>
+						
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active in" id="ntg-class-respondentrequest-json">
+								<pre class="line-numbers" data-src="assets/samples/json/class/RespondentRequest.json"></pre>
+							</div>
+
+							<div role="tabpanel" class="tab-pane" id="ntg-class-respondentrequest-csharp">
+								<pre class="line-numbers" data-src="assets/samples/cs/class/RespondentRequest.cs"></pre>
+							</div>
+						</div>
+					</div>
+				
+				</section>
+				
+                <!-- END Classes -->
+
+            </section>
+            <!-- END Types and enums -->
+
+        </article>
+        <!-- END Main content -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container-fluid">
+            <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <p>Copyright &copy; 2018. All right reserved</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="footer-menu">
+                        <li><a href="mailto:info@netigate.net">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END Footer -->
+
+    <!-- Scripts -->
+    <script src="../assets/vendors/jquery/jquery.min.js?v=1"></script>
+    <script src="../assets/vendors/bootstrap/js/bootstrap.min.js?v=1"></script>
+    <script src="../assets/vendors/clipboard.js/clipboard.min.js?v=1"></script>
+    <script src="../assets/vendors/lity/lity.min.js?v=1"></script>
+    <script src="../assets/vendors/jquery.slimscroll.min.js?v=1"></script>
+    <script src="../assets/vendors/matchHeight.min.js?v=1"></script>
+    <script src="../assets/js/prism-aspnet-csharp-css-http-json-linenum-lang-file.min.js?v=2"></script>
+
+    <script src="../assets/js/theDocs.ntgt.js?v=1"></script>
+    <script src="../assets/js/custom.js?v=1"></script>
+
+    <!-- Fix them apples -->
+    <script type="text/javascript" src="../assets/js/retina.min.js?v=1"></script>
+</body>
+</html>

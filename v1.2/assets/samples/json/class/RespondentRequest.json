@@ -1,0 +1,14 @@
+{
+    "contactDetails": "String content",
+    "backgroundData": [
+        {
+            "Key": "12345", 
+            "value": "String content"
+        },
+        {
+            "Key": "23456", 
+            "value": "String content"
+        }
+    ],
+    "sendMail": true
+}

@@ -1,0 +1,35 @@
+{
+    "surveyRespondents":
+    [
+        {
+            "contactDetails": "foo@bar.com",
+            "backgroundData": [
+                {
+                    "Key": "12345", 
+                    "value": "Value1"
+                },
+                {
+                    "Key": "12346", 
+                    "value": "Value2"
+                }
+            ],
+        
+            "sendMail": true
+        },
+        {
+            "contactDetails": "bar@foo.com",
+            "backgroundData": [
+                {
+                    "Key": "12345", 
+                    "value": "Value1"
+                },
+                {
+                    "Key": "12346", 
+                    "value": "Value2"
+                }
+            ],
+        
+            "sendMail": true
+        }
+    ]
+}

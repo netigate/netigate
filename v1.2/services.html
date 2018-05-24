@@ -1,0 +1,2480 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Netigate REST API</title>
+
+    <!-- Styles -->
+    <link href="../assets/css/theDocs.all.css?v=1" rel="stylesheet">
+    <link href="../assets/css/custom.css?v=1" rel="stylesheet">
+    <link href="../assets/css/netapi.css?v=1" rel="stylesheet">
+    <link href="../assets/css/prism-okaidia.css?v=1" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet" type="text/css">
+
+    <!-- Favicons -->
+    <!--<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+    <link rel="icon" href="../assets/img/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
+
+    <!-- Sidebar -->
+    <aside class="sidebar sidebar-boxed sidebar-dark">
+
+        <a class="sidebar-brand" href="index.html"><img src="../assets/img/logo-sidebar.png" alt="logo"></a>
+        
+        <span class="sidebar-version-list">
+            <a href="../v1/index.html">1.0</a>
+            <a href="../v1.1/index.html">1.1</a>
+            <a class="sidebar-version-list-active" href="#">1.2</a>
+        </span>
+
+        <ul class="nav sidenav dropable sticky">
+            <li>
+                <a href="index.html#general">General</a>
+                <ul>
+                    <li><a href="index.html#connecting">Connecting</a></li>
+                    <li><a href="index.html#auth">Authentication</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#services">Services</a>
+                <ul>
+                    <li>
+                        <a href="#surveys">Surveys</a>
+                    </li>
+                    <li>
+                        <a href="#questions">Questions</a>
+                    </li>
+                    <li>
+                        <a href="#answers">Answers</a>
+                    </li>
+                    <li>
+                        <a href="#sendouts">Sendouts</a>
+                    </li>
+                    <li>
+                        <a href="#categories">Categories</a>
+                    </li>
+                    <li>
+                        <a href="#users">Users</a>
+                    </li>
+                    <li>
+                        <a href="#misc">Misc</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="types.html#types-enums">Types and enums</a>
+                <ul>
+                    <li>
+                        <a href="types.html#types">Types</a>
+                    </li>
+                    <li>
+                        <a href="types.html#enums">Enums</a>
+                    </li>
+                    <li>
+                        <a href="types.html#class">Classes</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav sidenav">
+            <li>
+                <a href="changelog.html#Changelog">Changelog</a>
+            </li>
+        </ul>
+    </aside>
+    <!-- END Sidebar -->
+
+    <header class="site-header navbar-transparent">
+
+        <!-- Top navbar & branding -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+                <!-- Toggle buttons and brand -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                        <span class="glyphicon glyphicon-option-vertical"></span>
+                    </button>
+
+                    <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <!-- END Toggle buttons and brand -->
+
+                <!-- Top navbar -->
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Documentation</a></li>
+                        <li><a href="http://netigate.net/success-center/" target="_blank">Success Center</a></li>
+                        <li class="hero"><a href="http://netigate.net/l/free-account/">Get your free account</a></li>
+                    </ul>
+                </div>
+                <!-- END Top navbar -->
+
+            </div>
+        </nav>
+        <!-- END Top navbar & branding -->
+
+        <!-- Banner -->
+        <div class="banner auto-size" style="background-color: #1795ca">
+            <div class="container-fluid text-white">
+                <h1><strong>Netigate REST API</strong> documentation</h1>
+                <h5>Connect your insights gathered from the premiere survey platform with the platforms you already use.</h5>
+            </div>
+        </div>
+        <!-- END Banner -->
+
+    </header>
+
+    <main class="container-fluid">
+
+        <!-- Main content -->
+        <article class="main-content" role="main">
+
+            <p class="lead">We are quite excited to present our new API.</p>
+
+            <!-- Services -->
+            <section>
+                <h1 id="services">Services</h1>
+
+                <!-- Surveys -->
+                <section>
+                    <h2 id="surveys">Surveys</h2>
+
+                    <!-- ListSurveys -->
+                    <section id="sec-ListSurveys">
+                        <h4 id="ssec-ListSurveys">Listing Surveys</h4>
+                        <p>List all Surveys in an account.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListSurveys" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListSurveys" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListSurveys">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListSurveys">
+                                    <pre class="line-numbers"><code>Returns <a href="types.html#ntg-class-survey">Survey</a>[]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListSurveys" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListSurveys" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListSurveys">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListSurveys.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListSurveys">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListSurveys -->
+
+                    <hr />
+
+                    <!-- GetSurvey -->
+                    <section id="sec-GetSurvey">
+                        <h4 id="ssec-GetSurvey">Retrieving a Survey</h4>
+                        <p>Retrieve a specific Survey.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-GetSurvey" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-GetSurvey" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-GetSurvey">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-GetSurvey">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-GetSurvey" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-GetSurvey" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-GetSurvey">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/GetSurvey.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-GetSurvey">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END GetSurvey -->
+
+                </section>
+                <!-- END Surveys -->
+
+                <!-- Questions -->
+                <section>
+                    <h2 id="questions">Questions</h2>
+
+                    <!-- ListQuestions -->
+                    <section id="sec-ListQuestions">
+                        <h4 id="ssec-ListQuestions">Listing Questions</h4>
+                        <p>Retrieve the Question tree from a survey.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListQuestions" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListQuestions" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListQuestions">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/questions</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListQuestions">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of survey from which questions are requested.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListQuestions" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListQuestions" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListQuestions">
+                                    <pre class="line-numbers" data-src="assets/samples/json/reqresp/ListQuestions.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListQuestions">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListQuestions -->
+
+                </section>
+                <!-- END Questions -->
+
+                <!-- Answers -->
+                <section>
+                    <h2 id="answers">Answers</h2>
+
+                    <!-- ListAnswerSets -->
+                    <section id="sec-ListAnswerSets">
+                        <h4 id="ssec-ListAnswerSets">Listing AnswerSets</h4>
+                        <p>List all AnswerSets in a survey.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListAnswerSets" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListAnswerSets" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListAnswerSets">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/answers&#91;?from=&lt;ISO8601Date&gt;&to=&lt;ISO8601Date&gt;&updated=&lt;ISO8601Date&gt;&completed=true&#93;</code></pre>
+                                </div>
+
+                                <!--<div role="tabpanel" class="tab-pane" id="desc-req-ListAnswerSets">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>-->
+                                
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListAnswerSets">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of survey from which AnswerSets are requested.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>from</td>
+                                                    <td><a href="types.html#ntg-type-iso8601">ISO8601 date</a></td>
+                                                    <td>Optional</td>
+                                                    <td>Retrieve AnswerSets <i>created</i> since specified date.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>to</td>
+                                                    <td><a href="types.html#ntg-type-iso8601">ISO8601 date</a></td>
+                                                    <td>Optional</td>
+                                                    <td>Retrieve AnswerSets <i>created</i> up until specified date.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>updated</td>
+                                                    <td><a href="types.html#ntg-type-iso8601">ISO8601 date</a></td>
+                                                    <td>Optional</td>
+                                                    <td>Retrieve AnswerSets <i>updated</i> since specified date. Cannot be used in conjuction with from / to.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>completed</td>
+                                                    <td>Boolean</td>
+                                                    <td>Optional</td>
+                                                    <td>Retrieve completed AnswerSets only.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListAnswerSets" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListAnswerSets" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListAnswerSets">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListAnswerSets.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListAnswerSets">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListAnswerSets -->
+
+                    <hr />
+
+                    <!-- GetAnswerSet -->
+                    <section id="sec-GetAnswerSet">
+                        <h4 id="ssec-GetAnswerSet">Retrieving an AnswerSet</h4>
+                        <p>Retrieve a specific AnswerSet.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-GetAnswerSet" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-GetAnswerSet" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-GetAnswerSet">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/answers/&lt;answerSetId&gt;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-GetAnswerSet">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>answerSetId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>AnswerSetId of requested AnswerSet.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-GetAnswerSet" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-GetAnswerSet" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-GetAnswerSet">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/GetAnswerSet.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-GetAnswerSet">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END GetAnswerSet -->
+
+                    <hr />
+
+                    <!-- ListAnswerSetsFromRespondent -->
+                    <section id="sec-ListAnswerSetsFromRespondent">
+                        <h4 id="ssec-ListAnswerSetsFromRespondent">Retrieving a Respondent's Answers</h4>
+                        <p>Retrieve all AnswerSets for a specific Respondent.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListAnswerSetsFromRespondent" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListAnswerSetsFromRespondent" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListAnswerSetsFromRespondent">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/answers/respondent/&lt;respondentId&gt;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListAnswerSetsFromRespondent">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>respondentId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>RespondentId of Respondent whose answers are requested.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListAnswerSetsFromRespondent" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListAnswerSetsFromRespondent" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListAnswerSetsFromRespondent">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListAnswerSetsFromRespondent.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListAnswerSetsFromRespondent">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListAnswerSetsFromRespondent -->
+
+                    <hr />
+
+                    <!-- GetAnswer -->
+                    <section id="sec-GetAnswer">
+                        <h4 id="ssec-GetAnswer">Retrieving an Answer</h4>
+                        <p>Retrieve a respondent's answers for a specific question.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-GetAnswer" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-GetAnswer" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-GetAnswer">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/answers/&lt;answerSetId&gt;/questionitem/&lt;questionItemId&gt;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-GetAnswer">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>answerSetId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>AnswerSetId of requested AnswerSet.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>questionItemId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>QuestionItemId of QuestionItem from which answer is requested.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-GetAnswer" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-GetAnswer" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-GetAnswer">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/GetAnswer.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-GetAnswer">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END GetAnswer -->
+
+                </section>
+                <!-- END Answers -->
+
+                <!-- Sendouts -->
+                <section>
+                    <h2 id="sendouts">Sendouts</h2>
+
+                    <!-- ListSendouts -->
+                    <section id="sec-ListSendouts">
+                        <h4 id="ssec-ListSendouts">Listing Sendouts</h4>
+                        <p>List all Sendouts for a Survey.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListSendouts" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListSendouts" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListSendouts">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/sendouts</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListSendouts">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of Survey from which Sendouts are requested.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListSendouts" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListSendouts" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListSendouts">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListSendouts.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListSendouts">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListSendouts -->
+
+                    <hr />
+
+                    <!-- GetSendout -->
+                    <section id="sec-GetSendout">
+                        <h4 id="ssec-GetSendout">Retrieving a Sendout</h4>
+                        <p>Retrieve a specific sendout for a survey.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-GetSendout" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-GetSendout" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-GetSendout">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/sendouts/&lt;sendoutId&gt;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-GetSendout">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendoutId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SendoutId of requested Sendout.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-GetSendout" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-GetSendout" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-GetSendout">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/GetSendout.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-GetSendout">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END GetSendout -->
+
+                    <hr />
+
+                    <!-- CreateSendout -->
+                    <section id="sec-CreateSendout">
+                        <h4 id="ssec-CreateSendout">Creating a Sendout</h4>
+                        <p>Create a new Sendout for a Survey.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-CreateSendout" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-CreateSendout" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-CreateSendout">
+                                    <pre class="line-numbers"><code class="ntg-http-request">POST /surveys/&lt;surveyId&gt;/sendouts</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-CreateSendout">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Request body -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#reqbody-CreateSendout" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-reqbody-CreateSendout" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="reqbody-CreateSendout">
+                                    <pre class="line-numbers line-numbers-copy" data-src="../assets/samples/json/reqresp/CreateSendout.request.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-reqbody-CreateSendout">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>name</td>
+                                                    <td>String</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Name of the Sendout.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>type</td>
+                                                    <td>String</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Valid <a href="types.html#ntg-enum-dispatch_type">DispatchType</a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendDate</td>
+                                                    <td><a href="types.html#ntg-type-iso8601">ISO8601 date</a></td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Send date. Leave empty for LOGIN.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sender</td>
+                                                    <td>String</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Valid <a href="types.html#ntg-type-email">email address</a> or <a href="types.html#ntg-type-sms-sender">SMS sender</a>. Leave empty for LOGIN.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>subject</td>
+                                                    <td>String</td>
+                                                    <td>See remark</td>
+                                                    <td>Optional for SMS. Leave empty for LOGIN.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>message</td>
+                                                    <td>String</td>
+                                                    <td>See remark</td>
+                                                    <td>Email body or SMS message, including survey link and optional opt-out link. Leave empty for LOGIN.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-CreateSendout" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-CreateSendout" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-CreateSendout">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/CreateSendout.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-CreateSendout">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END CreateSendout -->
+
+                    <hr />
+
+                    <!-- ActivateSendout -->
+                    <section id="sec-ActivateSendout">
+                        <h4 id="ssec-ActivateSendout">Activating a Sendout</h4>
+                        <p>After you have created a Sendout, you need to activate it.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ActivateSendout" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ActivateSendout" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ActivateSendout">
+                                    <pre class="line-numbers"><code class="ntg-http-request">POST /surveys/&lt;surveyId&gt;/sendouts/&lt;sendoutId&gt;/activate</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ActivateSendout">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendoutId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SendoutId of Sendout you wish to activate.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ActivateSendout" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ActivateSendout" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ActivateSendout">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ActivateSendout.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ActivateSendout">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ActivateSendout -->
+
+                    <hr />
+
+                    <!-- ListRespondents -->
+                    <section id="sec-ListRespondents">
+                        <h4 id="ssec-ListRespondents">Listing Respondents</h4>
+                        <p>List all Respondents in a Sendout.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListRespondents" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListRespondents" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListRespondents">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/sendouts/&lt;sendoutId&gt;/respondents</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListRespondents">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendoutId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SendoutId of Sendout from which respondents are requested.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListRespondents" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListRespondents" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListRespondents">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListRespondents.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListRespondents">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListRespondents -->
+
+                    <hr />
+
+                    <!-- AddRespondent -->
+                    <section id="sec-AddRespondent">
+                        <h4 id="ssec-AddRespondent">Adding Respondents</h4>
+                        <p>Add a new Respondent with optional background data to a Sendout.</p>
+                        <p>Remember to (re-)activate the sendout after adding a batch of respondents to it.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-AddRespondent" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-AddRespondent" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-AddRespondent">
+                                    <pre class="line-numbers"><code class="ntg-http-request">POST /surveys/&lt;surveyId&gt;/sendouts/&lt;sendoutId&gt;/respondents</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-AddRespondent">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendoutId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SendoutId of Sendout to which a respondent is added.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Request body -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#reqb-AddRespondent" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-reqb-AddRespondent" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="reqb-AddRespondent">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/AddRespondent.request.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-reqb-AddRespondent">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>contactDetails</td>
+                                                    <td>String</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Valid <a href="types.html#ntg-type-email">email address</a>, <a href="types.html#ntg-type-sms-recipient">SMS recipient</a> or login identifier.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendMail</td>
+                                                    <td>Boolean</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Indicates whether Netigate should send the survey link to the respondent, or if you distribute it yourself.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>backgroundData</td>
+                                                    <td>Dictionary&lt;int, string&gt;</td>
+                                                    <td>Optional</td>
+                                                    <td>Key = BGDataLabelId, Value = respondent's background data (not empty or null)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-AddRespondent" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-AddRespondent" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-AddRespondent">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/AddRespondent.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-AddRespondent">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END AddRespondent -->
+					
+					
+					<hr />
+					
+					<section id="sec-AddMultipleRespondent">
+                        <h4 id="ssec-AddMultipleRespondent">Adding Multiple Respondents</h4>
+                        <p>Add new Respondents with optional background data to a Sendout in a batch.</p>
+                        <p>Remember to (re-)activate the sendout after adding a batch of respondents to it.</p>
+
+						<br />
+						
+						<div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-AddMultipleRespondent" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-AddMultipleRespondent" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-AddMultipleRespondent">
+                                    <pre class="line-numbers"><code class="ntg-http-request">POST /surveys/&lt;surveyId&gt;/sendouts/&lt;sendoutId&gt;/respondents/batch</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-AddMultipleRespondent">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendoutId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SendoutId of Sendout to which a respondent is added.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						<!-- Request body -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#reqb-AddMultipleRespondent" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-reqb-AddMultipleRespondent" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="reqb-AddMultipleRespondent">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/RespondentRequest.request.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-reqb-AddMultipleRespondent">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyRespondents</td>
+                                                    <td>List&lt;RespondentRequest&gt;</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Valid <a href="types.html#ntg-class-respondentrequest">RespondentRequest</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						<!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-AddMultipleRespondent" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-AddMultipleRespondent" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-AddMultipleRespondent">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/AddRespondentsBatch.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-AddMultipleRespondent">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+						
+					</section>
+					
+                    <hr />
+
+                    <!-- ListReminders -->
+                    <section id="sec-ListReminders">
+                        <h4 id="ssec-ListReminders">Listing Reminders</h4>
+                        <p>List all Reminders for a Sendout.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListReminders" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListReminders" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListReminders">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/sendouts/&lt;sendoutId&gt;/reminders</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListReminders">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendoutId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SendoutId of Sendout from which reminders are requested.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListReminders" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListReminders" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListReminders">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListReminders.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListReminders">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListReminders -->
+
+                    <hr />
+
+                    <!-- CreateReminder -->
+                    <section id="sec-CreateReminder">
+                        <h4 id="ssec-CreateReminder">Creating a Reminder</h4>
+                        <p>Create a Reminder for a Sendout.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-CreateReminder" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-CreateReminder" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-CreateReminder">
+                                    <pre class="line-numbers"><code class="ntg-http-request">POST /surveys/&lt;surveyId&gt;/sendouts/&lt;sendoutId&gt;/reminders</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-CreateReminder">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendoutId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SendoutId of Sendout to which a reminder is added.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Request body -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#reqb-CreateReminder" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-reqb-CreateReminder" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="reqb-CreateReminder">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/CreateReminder.request.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateReminder">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>sendoutLogic</td>
+                                                    <td>String</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Valid <a href="types.html#ntg-enum-sendout_logic">SendoutLogic</a> describing whom will receive the reminder.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendDate</td>
+                                                    <td><a href="types.html#ntg-type-iso8601">ISO8601 date</a></td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Send date.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sender</td>
+                                                    <td>String</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Valid <a href="types.html#ntg-type-email">email address</a> or <a href="types.html#ntg-type-sms-sender">SMS sender</a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>subject</td>
+                                                    <td>String</td>
+                                                    <td>See remark</td>
+                                                    <td>Optional for SMS.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>message</td>
+                                                    <td>String</td>
+                                                    <td>Mandatory</td>
+                                                    <td>Email body or SMS message, including survey link.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-CreateReminder" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-CreateReminder" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-CreateReminder">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/CreateReminder.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-CreateReminder">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END CreateReminder -->
+
+                    <hr />
+
+                    <!-- ListBackgroundLabels -->
+                    <section id="sec-ListBackgroundLabels">
+                        <h4 id="ssec-ListBackgroundLabels">Listing Background Data Labels</h4>
+                        <p>List all background data labels in a Sendout.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListBackgroundLabels" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListBackgroundLabels" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListBackgroundLabels">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/sendouts/&lt;sendoutId&gt;/labels</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListBackgroundLabels">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendoutId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SendoutId of Sendout from which background data labels are requested.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListBackgroundLabels" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListBackgroundLabels" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListBackgroundLabels">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListBackgroundLabels.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListBackgroundLabels">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListBackgroundLabels -->
+
+                    <hr />
+
+                    <!-- CreateBackgroundLabel -->
+                    <section id="sec-CreateBackgroundLabel">
+                        <h4 id="ssec-CreateBackgroundLabel">Creating a Background Data Label</h4>
+                        <p>Create a background data label in a Sendout.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-CreateBackgroundLabel" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-CreateBackgroundLabel" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-CreateBackgroundLabel">
+                                    <pre class="line-numbers"><code class="ntg-http-request">POST /surveys/&lt;surveyId&gt;/sendouts/&lt;sendoutId&gt;/labels</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-CreateBackgroundLabel">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendoutId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SendoutId of Sendout to which a background data label is added.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Request body -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#reqb-CreateBackgroundLabel" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-reqb-CreateBackgroundLabel" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="reqb-CreateBackgroundLabel">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/CreateBackgroundLabel.request.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateBackgroundLabel">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>name</td>
+                                                    <td>String</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Name of the background data label.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>labelType</td>
+                                                    <td>String</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Valid <a href="types.html#ntg-enum-label_type">LabelType</a>.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-CreateBackgroundLabel" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-CreateBackgroundLabel" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-CreateBackgroundLabel">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/CreateBackgroundLabel.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-CreateBackgroundLabel">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END CreateBackgroundLabel -->
+
+                </section>
+                <!-- END Sendouts -->
+
+                <!-- Categories -->
+                <section>
+                    <h2 id="categories">Categories</h2>
+
+                    <!-- ListCategories -->
+                    <section id="sec-ListCategories">
+                        <h4 id="ssec-ListCategories">Listing Categories</h4>
+                        <p>List all Categories in an Account.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListCategories" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListCategories" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListCategories">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /accounts/categories</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListCategories">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListCategories" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListCategories" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListCategories">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListCategories.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListCategories">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListCategories -->
+
+                    <hr />
+
+                    <!-- GetCategory -->
+                    <section id="sec-GetCategory">
+                        <h4 id="ssec-GetCategory">Retrieving a Category</h4>
+                        <p>Retrieve a specific Category in an Account.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-GetCategory" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-GetCategory" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-GetCategory">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /accounts/categories/&lt;categoryId&gt;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-GetCategory">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>categoryId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>CategoryId of requested Category.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-GetCategory" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-GetCategory" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-GetCategory">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/GetCategory.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-GetCategory">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END GetCategory -->
+
+                    <hr />
+
+                    <!-- CreateCategory -->
+                    <section id="sec-CreateCategory">
+                        <h4 id="ssec-CreateCategory">Creating a Category</h4>
+                        <p>Create a new Category in an Account.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-CreateCategory" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-CreateCategory" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-CreateCategory">
+                                    <pre class="line-numbers"><code class="ntg-http-request">POST /accounts/categories</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-CreateCategory">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Request body -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#reqb-CreateCategory" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-reqb-CreateCategory" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="reqb-CreateCategory">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/CreateCategory.request.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-reqb-CreateCategory">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>name</td>
+                                                    <td>String</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Name of the Category.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-CreateCategory" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-CreateCategory" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-CreateCategory">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/CreateCategory.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-CreateCategory">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END CreateCategory -->
+
+                </section>
+                <!-- END Categories -->
+
+                <!-- Users -->
+                <section>
+                    <h2 id="users">Users</h2>
+
+                    <!-- ListUsers -->
+                    <section id="sec-ListUsers">
+                        <h4 id="ssec-ListUsers">Listing Users</h4>
+                        <p>List all Users in an Account.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListUsers" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListUsers" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListUsers">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /accounts/users</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListUsers">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListUsers" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListUsers" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListUsers">
+                                    <pre class="line-numbers" data-src="assets/samples/json/reqresp/ListUsers.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListUsers">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListUsers -->
+
+                    <hr />
+
+                    <!-- GetUser -->
+                    <section id="sec-GetUser">
+                        <h4 id="ssec-GetUser">Retrieving a User</h4>
+                        <p>Retrieve a specific User in an Account.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-GetUser" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-GetUser" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-GetUser">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /accounts/users/&lt;userId&gt;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-GetUser">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>userId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>UserId of requested User.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-GetUser" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-GetUser" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-GetUser">
+                                    <pre class="line-numbers" data-src="assets/samples/json/reqresp/GetUser.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-GetUser">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END GetUser -->
+
+                </section>
+                <!-- END Users -->
+
+                <!-- Misc -->
+                <section>
+                    <h2 id="misc">Misc</h2>
+
+                    <!-- ListBlocks -->
+                    <section id="sec-ListBlocks">
+                        <h4 id="ssec-ListBlocks">Blocklist</h4>
+                        <p>List all blocked and opt-out respondents in account.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListBlocks" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListBlocks" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListBlocks">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /accounts/blocklist</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListBlocks">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListBlocks" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListBlocks" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListBlocks">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListBlocks.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListBlocks">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListBlocks -->
+
+                </section>
+                <!-- END Misc -->
+
+            </section>
+            <!-- END Services -->
+
+        </article>
+        <!-- END Main content -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container-fluid">
+            <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <p>Copyright &copy; 2018. All right reserved</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="footer-menu">
+                        <li><a href="mailto:info@netigate.net">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END Footer -->
+
+    <!-- Scripts -->
+    <script src="../assets/vendors/jquery/jquery.min.js?v=1"></script>
+    <script src="../assets/vendors/bootstrap/js/bootstrap.min.js?v=1"></script>
+    <script src="../assets/vendors/clipboard.js/clipboard.min.js?v=1"></script>
+    <script src="../assets/vendors/lity/lity.min.js?v=1"></script>
+    <script src="../assets/vendors/jquery.slimscroll.min.js?v=1"></script>
+    <script src="../assets/vendors/matchHeight.min.js?v=1"></script>
+    <script src="../assets/js/prism-aspnet-csharp-css-http-json-linenum-lang-file.min.js?v=2"></script>
+
+    <script src="../assets/js/theDocs.ntgt.js?v=1"></script>
+    <script src="../assets/js/custom.js?v=1"></script>
+
+    <!-- Fix them apples -->
+    <script type="text/javascript" src="../assets/js/retina.min.js?v=1"></script>
+</body>
+</html>

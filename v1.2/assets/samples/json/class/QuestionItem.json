@@ -1,0 +1,21 @@
+﻿{
+    "QuestionItemId": 2147483647,
+    "Order": 2147483647,
+    "Type": "String content",
+    "Text": "String content",
+    "BackgroundLabel": 2147483647,
+    "Rows": [
+        {
+            "Order": 2147483647,
+            "Text": "String content",
+            "Weight": 2147483647
+        }
+    ],
+    "Columns": [
+        {
+            "Order": 2147483647,
+            "Text": "String content",
+            "Weight": 2147483647
+        }
+    ]
+}
