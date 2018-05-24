@@ -13,22 +13,11 @@
                     "value": "Value2"
                 }
             ],
-        
-            "sendMail": true
+            "sendMail": false
         },
         {
             "contactDetails": "bar@foo.com",
-            "backgroundData": [
-                {
-                    "Key": "12345", 
-                    "value": "Value1"
-                },
-                {
-                    "Key": "12346", 
-                    "value": "Value2"
-                }
-            ],
-        
+            "backgroundData": [],
             "sendMail": true
         }
     ]
