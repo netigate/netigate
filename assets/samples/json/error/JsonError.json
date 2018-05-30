@@ -1,0 +1,4 @@
+{
+    "StatusCode": 401, 
+    "Message": "Unauthorized access. Missing X-API-KEY."
+}
