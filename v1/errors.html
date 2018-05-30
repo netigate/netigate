@@ -28,9 +28,7 @@
     <!-- Sidebar -->
     <aside class="sidebar sidebar-boxed sidebar-dark">
 
-        <a class="sidebar-brand" href="index.html">
-            <img src="../assets/img/logo-sidebar.png" alt="logo">
-        </a>
+        <a class="sidebar-brand" href="index.html"><img src="../assets/img/logo-sidebar.png" alt="logo"></a>
         
         <span class="sidebar-version-list">
             <a class="sidebar-version-list-active" href="#">1.0</a>
@@ -39,10 +37,10 @@
 
         <ul class="nav sidenav dropable sticky">
             <li>
-                <a href="#general">General</a>
+                <a href="index.html#general">General</a>
                 <ul>
-                    <li><a href="#connecting">Connecting</a></li>
-                    <li><a href="#auth">Authentication</a></li>
+                    <li><a href="index.html#connecting">Connecting</a></li>
+                    <li><a href="index.html#auth">Authentication</a></li>
                 </ul>
             </li>
 
@@ -77,13 +75,13 @@
                 <a href="types.html#types-enums">Types and enums</a>
                 <ul>
                     <li>
-                        <a href="types.html#types">Types</a>
+                        <a href="#types">Types</a>
                     </li>
                     <li>
-                        <a href="types.html#enums">Enums</a>
+                        <a href="#enums">Enums</a>
                     </li>
                     <li>
-                        <a href="types.html#class">Classes</a>
+                        <a href="#class">Classes</a>
                     </li>
                 </ul>
             </li>
@@ -91,11 +89,10 @@
         
         <ul class="nav sidenav">
             <li>
-                <a href="errors.html#errors">Error handling</a>
+                <a href="#errors">Error handling</a>
             </li>
         </ul>
         
-        <!--<ul class="nav sidenav dropable sticky">-->
         <ul class="nav sidenav">
             <li>
                 <a href="changelog.html#Changelog">Changelog</a>
@@ -155,63 +152,82 @@
         <!-- Main content -->
         <article class="main-content" role="main">
 
-            <!-- General -->
+            <!-- Error handling -->
             <section>
-                <h1 id="general">General</h1>
+                <h1 id="error-handling">Error handling</h1>
 
-                <!-- Connecting -->
+                <!-- Errors -->
                 <section>
-                    <h2 id="connecting">Connecting</h2>
-                    <table class="table">
-                        <caption>Connection parameters</caption>
-                        <tbody>
-                            <tr>
-                                <td>Base URLs</td>
-                                <td>https://www.netigate.se/api/v1<br/>https://www.ntgt.de/api/v1</td>
-                            </tr>
-                            <tr>
-                                <td>Protocol</td>
-                                <td>HTTPS</td>
-                            </tr>
-                            <tr>
-                                <td>Port</td>
-                                <td>443</td>
-                            </tr>
-                            <tr>
-                                <td>Authentication</td>
-                                <td>Token in HTTP header</td>
-                            </tr>
-                            <tr>
-                                <td>Technology</td>
-                                <td>REST</td>
-                            </tr>
-                            <tr>
-                                <td>Request/response format</td>
-                                <td>JSON</td>
-                            </tr>
-                            <tr>
-                                <td>Character encoding</td>
-                                <td>UTF-8</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                <!-- END Connecting -->
+                    <h2 id="errors">Errors</h2>
 
-                <!-- Authentication -->
-                <section>
-                    <h2 id="auth">Authentication</h2>
-                    <p>
-                        Each request must be authenticated by the use of a <i>token</i>.
-                        To obtain your token, please contact your account manager at Netigate.
-                    </p>
-                    <p>The token is provided with an HTTP header called <code>X-API-KEY</code>.</p>
-                    <pre class="line-numbers"><code><b>X-API-KEY:</b> 4053460E-2638-4131-85D8-7350BCDDBC1C</code></pre>
+                    <section id="sec-error-object">
+                        <h4 id="ntg-error-object">Error object</h4>
+                        <p>
+                            Whenever an error occurs in an API request, the API will respond with an error object containing a status code and a message describing the error.<br/>
+                            The error object is JSON encoded and has the following format:
+                        </p>
+                        
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#ntg-error-object-json" aria-controls="home" role="tab" data-toggle="tab">JSON</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="ntg-error-object-json">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/error/JsonError.json"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <section id="sec-error-codes">
+                        <h4 id="ntg-error-codes">Error codes</h4>
+                        <p>Below you will find a list of all available error codes which the API can respond with.</p>
+                        
+                        <br />
+                        
+                        <div role="tabpanel" class="tab-pane" id="desc-error-codes">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>StatusCode</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>400</td>
+                                            <td>Invalid argument(s) in request.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>401</td>
+                                            <td>Unauthorized access request to resource.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>404</td>
+                                            <td>Resource not found. Invalid resource ID.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>500</td>
+                                            <td>Internal error.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
                 </section>
-                <!-- END Authentication -->
+                <!-- END Errors -->
 
             </section>
-            <!-- END General -->
+            <!-- END Error handling -->
 
         </article>
         <!-- END Main content -->

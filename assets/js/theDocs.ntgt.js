@@ -22,7 +22,7 @@
 
     // Set the height of sidebar if it's fixed  .height(sidenav_max_height)
     if ($('.sidenav.sticky').size() > 0) {
-        var sidenav_max_height = $(window).height() - $('.sidenav.sticky').position().top - 100;
+        var sidenav_max_height = $(window).height() - $('.sidenav.sticky').position().top - 128;
         $('.sidenav.sticky').height(sidenav_max_height);
     }
 
