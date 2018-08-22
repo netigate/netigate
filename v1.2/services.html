@@ -66,6 +66,9 @@
                     <li>
                         <a href="#users">Users</a>
                     </li>
+					<li>
+						<a href="#background-data">Background Data</a>
+					</li>
                     <li>
                         <a href="#misc">Misc</a>
                     </li>
@@ -2374,6 +2377,754 @@
 
                 </section>
                 <!-- END Users -->
+				
+				
+				<!-- Background Data -->
+				<section>
+                    <h2 id="background-data">Background Data</h2>
+					
+					<!-- List BG Docs -->
+					<section id="sec-ListBackgroundDocuments">
+						<h4 id="ssec-ListBackgroundDocuments">List Background Data Documents</h4>
+						<p>List all Background Data Documents in the account.</p>
+						
+						<br />
+						
+						<!-- Request -->
+						<div class="tabs tabs-text">
+							<ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListBGDocuments" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListBGDocuments" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+							
+							<!-- Tab panes -->
+							<div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListBGDocuments">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /bgdata/bgdocuments</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListBGDocuments">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+						</div>
+						
+						 <!-- Response -->
+                        <div class="tabs tabs-text">
+							
+							<!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListBgDocuments" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListBgDocuments" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+						
+						</div>
+						
+						 <!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active in" id="resp-ListBgDocuments">
+								<pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListBackgroundDataDocuments.response.json"></pre>
+							</div>
+
+							<div role="tabpanel" class="tab-pane" id="desc-resp-ListBgDocuments">
+								<pre class="line-numbers"><code>No description.</code></pre>
+							</div>
+						</div>
+						
+					</section>
+					
+					<hr />
+					
+					<!-- List BG Doc -->
+					<section id="sec-GetBackgroundDocument">
+						<h4 id="ssec-GetBackgroundDocument">Retrevie a Background Data Document</h4>
+						<p>Retrieve a specific Background Data Document</p>
+						
+						<br />
+						
+						<!-- Request -->
+						<div class="tabs tabs-text">
+							<ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListBGDocument" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListBGDocument" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+							
+							<!-- Tab panes -->
+							<div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListBGDocument">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /bgdata/bgdocument/&lt;bgDocumentId&gt;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListBGDocument">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>bgDocumentId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>DocumentId of requested Document.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+						
+						 <!-- Response -->
+                        <div class="tabs tabs-text">
+							
+							<!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListBgDocument" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListBgDocument" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+						
+						</div>
+						
+						 <!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active in" id="resp-ListBgDocument">
+								<pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListBackgroundDataDocument.response.json"></pre>
+							</div>
+
+							<div role="tabpanel" class="tab-pane" id="desc-resp-ListBgDocument">
+								<pre class="line-numbers"><code>No description.</code></pre>
+							</div>
+						</div>
+						
+					</section>
+					
+					<hr />
+					
+					<!-- List BG Labels -->
+					
+					<section id="sec-GetBGDocumentLabels">
+						<h4 id="ssec-GetBGDocumentLabels">List Document Labels</h4>
+						<p>Retrieve all Labels for a specific Document.</p>
+						
+						<br />
+
+						
+						<!-- Request -->
+						<div class="tabs tabs-text">
+							<ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListBGLabels" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListBGLabels" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+							
+							<!-- Tab panes -->
+							
+							<div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListBGLabels">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /bgdata/bgdocument/&lt;bgDocumentId&gt;/labels</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListBGLabels">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>bgDocumentId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>DocumentId of requested Labels Document.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+						
+						<!-- Response -->
+                        <div class="tabs tabs-text">
+							
+							<!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListBgLabels" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListBgLabels" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+						
+						</div>
+						
+						 <!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active in" id="resp-ListBgLabels">
+								<pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListBackgroundLabels.response.json"></pre>
+							</div>
+
+							<div role="tabpanel" class="tab-pane" id="desc-resp-ListBgLabels">
+								<pre class="line-numbers"><code>No description.</code></pre>
+							</div>
+						</div>
+						
+						
+					</section>
+					
+					<hr />
+					
+					<!-- List BG Labels -->
+					
+					<section id="sec-GetBGCells">
+						<h4 id="ssec-GetBGCells">List Cells</h4>
+						<p>Retrieve specific Cells from a specific row in a bgdocument.</p>
+						
+						<br />
+						
+						<!-- Request -->
+						<div class="tabs tabs-text">
+							<ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-GetBGCells" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-GetBGCells" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+						</div>
+						
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active in" id="req-GetBGCells">
+								<pre class="line-numbers"><code class="ntg-http-request">POST /bgdata/bgdocuments/&lt;bgDocumentId&gt;/rows/&lt;respondentId&gt;</code></pre>
+							</div>
+
+							<div role="tabpanel" class="tab-pane" id="desc-req-GetBGCells">
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Optionality</th>
+												<th>Remark</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>bgDocumentId</td>
+												<td>Integer</td>
+												<td class="req-parameter-mandatory">Mandatory</td>
+												<td>DocumentId of requested Document.</td>
+											</tr>
+											<tr>
+												<td>respondentId</td>
+												<td>Integer</td>
+												<td class="req-parameter-mandatory">Mandatory</td>
+												<td>Row identifier for a specific row/respondent.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Request body -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#reqb-GetBGCells" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-reqb-GetBGCells" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="reqb-GetBGCells">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/GetBGCells.request.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-reqb-GetBGCells">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>labels</td>
+                                                    <td>List&lt;int&gt;</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>List of the Label Id:s to specify which cells to return.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						<!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-GetBGCells" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-GetBGCells" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-GetBGCells">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/GetBGCells.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-GetBGCells">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+						
+						
+					</section>
+					
+					<hr />
+					
+					<!-- Edit BG Rows -->
+					
+					<section id="sec-EditBGDataRow">
+						<h4 id="ssec-EditBGDataRow">Edit Cells in a document</h4>
+						<p>Edit specific Cells for a specific row in a bgdocument.</p>
+						
+						<br />
+						
+						<!-- Request -->
+						<div class="tabs tabs-text">
+							<ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-EditBGDataRow" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-EditBGDataRow" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+						</div>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active in" id="req-EditBGDataRow">
+								<pre class="line-numbers"><code class="ntg-http-request">PUT /bgdata/bgdocuments/&lt;bgDocumentId&gt;/rows/&lt;respondentId&gt;</code></pre>
+							</div>
+
+							<div role="tabpanel" class="tab-pane" id="desc-req-EditBGDataRow">
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Optionality</th>
+												<th>Remark</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>bgDocumentId</td>
+												<td>Integer</td>
+												<td class="req-parameter-mandatory">Mandatory</td>
+												<td>DocumentId of requested Document.</td>
+											</tr>
+											<tr>
+												<td>respondentId</td>
+												<td>Integer</td>
+												<td class="req-parameter-mandatory">Mandatory</td>
+												<td>Row identifier for a specific row/respondent.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Request body -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#reqb-EditBGDataRow" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-reqb-EditBGDataRow" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="reqb-EditBGDataRow">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/EditBGDataRow.request.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-reqb-EditBGDataRow">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>cellData</td>
+                                                    <td>Dictionary&lt;int, string&gt;</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Dictionary of the Label Id:s and Cell Data to specify which cells to edit with what data.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						<!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-EditBGDataRow" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-EditBGDataRow" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-EditBGDataRow">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/EditBGDataRow.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-EditBGDataRow">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+						
+					</section>
+					
+					<hr />
+					
+					<!-- Add BG Rows -->
+					
+					<section id="sec-AddBgDataRow">
+						<h4 id="ssec-AddBgDataRow">Add row to a Document</h4>
+						<p>Adds a new row of cells in the background data document.</p>
+						
+						<br />
+						
+						<!-- Request -->
+						<div class="tabs tabs-text">
+							<ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-AddBgDataRow" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-AddBgDataRow" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+						</div>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active in" id="req-AddBgDataRow">
+								<pre class="line-numbers"><code class="ntg-http-request">POST /bgdata/bgdocuments/&lt;bgDocumentId&gt;/rows</code></pre>
+							</div>
+
+							<div role="tabpanel" class="tab-pane" id="desc-req-AddBgDataRow">
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Optionality</th>
+												<th>Remark</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>bgDocumentId</td>
+												<td>Integer</td>
+												<td class="req-parameter-mandatory">Mandatory</td>
+												<td>DocumentId of requested Document.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Request body -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#reqb-AddBgDataRow" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-reqb-AddBgDataRow" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="reqb-AddBgDataRow">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/AddBgDataRow.request.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-reqb-AddBgDataRow">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+												<tr>
+                                                    <td>contactDetails</td>
+                                                    <td>string</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Every row/respondent need contact details. Valid <a href="types.html#ntg-type-email">email address</a>, <a href="types.html#ntg-type-sms-recipient">SMS recipient</a> or login identifier.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>cellData</td>
+                                                    <td>Dictionary&lt;int, string&gt;</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>Dictionary of the Label Id:s and Cell Data to specify which cells to edit with what data.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						<!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-AddBgDataRow" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-AddBgDataRow" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-AddBgDataRow">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/AddBgDataRow.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-AddBgDataRow">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+						
+					</section>
+					
+					<hr />
+					
+					<!-- Delete BG Cells -->
+					
+					<section id="sec-deleteCells">
+						<h4 id="ssec-deleteCells">Delete Cells</h4>
+						<p>Deletes specific cells in a row.</p>
+						
+						<br />
+						
+						<!-- Request -->
+						<div class="tabs tabs-text">
+							<ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-deleteCells" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-deleteCells" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+						</div>
+						
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active in" id="req-deleteCells">
+								<pre class="line-numbers"><code class="ntg-http-request">DELETE /bgdata/bgdocuments/&lt;bgDocumentId&gt;/rows/&lt;respondentId&gt;</code></pre>
+							</div>
+
+							<div role="tabpanel" class="tab-pane" id="desc-req-deleteCells">
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Optionality</th>
+												<th>Remark</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>bgDocumentId</td>
+												<td>Integer</td>
+												<td class="req-parameter-mandatory">Mandatory</td>
+												<td>DocumentId of requested Document.</td>
+											</tr>
+											<tr>
+												<td>respondentId</td>
+												<td>Integer</td>
+												<td class="req-parameter-mandatory">Mandatory</td>
+												<td>Row identifier for a specific row/respondent.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Request body -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#reqb-deleteCells" aria-controls="home" role="tab" data-toggle="tab">Request body</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-reqb-deleteCells" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="reqb-deleteCells">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/DeleteCells.request.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-reqb-deleteCells">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+												
+                                            </thead>
+                                            <tbody>
+												<tr>
+                                                    <td>labels</td>
+                                                    <td>List&lt;int&gt;</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>List of the Label Id:s to specify which cells to delete.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						<!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-deleteCells" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-deleteCells" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-deleteCells">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/DeleteCells.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-deleteCells">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+						
+						
+					</section>
+					
+					
+                </section>
+                <!-- END Background data -->
+				
+				
 
                 <!-- Misc -->
                 <section>
