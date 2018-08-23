@@ -1,4 +1,5 @@
-{	"contactDetails": "foo@bar.com",
+{	
+	"contactDetails": "foo@bar.com",
 	"cellData" : [
 	        {
 	            "Key": "523070",
