@@ -1,0 +1,19 @@
+{
+    "AddRowResult": {
+        "RespondentId": 136578622,
+        "Cells": [
+            {
+                "labelId": 523070,
+                "value": "String content"
+            },
+            {
+                "labelId": 523071,
+                "value": "String content"
+            },
+            {
+                "labelId": 523072,
+                "value": "String content"
+            }
+        ]
+    }
+}
