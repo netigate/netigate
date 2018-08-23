@@ -1,0 +1,58 @@
+[
+    {
+        "BGDocumentId": 123456,
+        "Created": "String content",
+        "Name": "String content",
+        "Description": "String content",
+        "Labels": [
+            {
+                "BGDataLabelId": 234567,
+                "Document": 123456,
+                "Name": "String content",
+                "Type": "String content",
+                "Options": [
+                    {
+                        "BGDataOptionId": 34567,
+                        "Label": 234567,
+                        "Option": "String content",
+                        "Order": 1
+                    },
+					{
+                        "BGDataOptionId": 34568,
+                        "Label": 234567,
+                        "Option": "String content",
+                        "Order": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "BGDocumentId": 123457,
+        "Created": "String content",
+        "Name": "String content",
+        "Description": "String content",
+        "Labels": [
+            {
+                "BGDataLabelId": 234568,
+                "Document": 123457,
+                "Name": "String content",
+                "Type": "String content",
+                "Options": [
+                    {
+                        "BGDataOptionId": 34577,
+                        "Label": 234568,
+                        "Option": "String content",
+                        "Order": 1
+                    },
+					{
+                        "BGDataOptionId": 34578,
+                        "Label": 234568,
+                        "Option": "String content",
+                        "Order": 2
+                    }
+                ]
+            }
+        ]
+    }
+]
