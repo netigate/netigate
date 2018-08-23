@@ -1,10 +1,10 @@
 {
-    "GetBGCellsResult": {
+    "EditBGDataRowResult": {
         "RespondentId": 90994123,
         "Cells": [
             {
                 "labelId": 523070,
-                "value": null
+                "value": "String content"
             },
             {
                 "labelId": 523071,
