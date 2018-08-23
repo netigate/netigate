@@ -17,7 +17,7 @@
                         "Option": "String content",
                         "Order": 1
                     },
-					{
+                    {
                         "BGDataOptionId": 34568,
                         "Label": 234567,
                         "Option": "String content",
@@ -45,7 +45,7 @@
                         "Option": "String content",
                         "Order": 1
                     },
-					{
+                    {
                         "BGDataOptionId": 34578,
                         "Label": 234568,
                         "Option": "String content",

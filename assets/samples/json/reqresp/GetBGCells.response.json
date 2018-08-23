@@ -1,0 +1,19 @@
+{
+    "GetBGCellsResult": {
+        "RespondentId": 90994123,
+        "Cells": [
+            {
+                "labelId": 523070,
+                "value": null
+            },
+            {
+                "labelId": 523071,
+                "value": "1"
+            },
+            {
+                "labelId": 523072,
+                "value": "2"
+            }
+        ]
+    }
+}
