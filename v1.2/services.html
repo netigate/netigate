@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -298,6 +298,160 @@
                     </section>
                     <!-- END GetSurvey -->
 
+                    <hr />
+
+                    <!-- CopySurvey -->
+                    <section id="sec-CopySurvey">
+                        <h4 id="ssec-CopySurvey">Copying a Survey</h4>
+                        <p>Copy a specific Survey.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-CopySurvey" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-CopySurvey" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-CopySurvey">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/copy&#91;?surveyname=&lt;NewSurveyName&gt;&description=&lt;NewSurveyDescription&gt;&amp;copyanswers=&lt;Boolean&gt;&amp;copylogic=&lt;Boolean&gt;&#93;</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-CopySurvey">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Example</th>
+                                                    <th>Default value</th>
+                                                    <th>Note</th>
+                                                    <th>Information</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>12345</td>
+                                                    <td>Mandatory, no default value</td>
+                                                    <td>Make sure a survey with this Id actually exists</td>
+                                                    <td>Id of the survey that is copied</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>surveyname</td>
+                                                    <td>Text</td>
+                                                    <td>Same as the survey that is copied</td>
+                                                    <td></td>
+                                                    <td>This will be your TK number</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>description</td>
+                                                    <td>Text</td>
+                                                    <td>Same as the survey that is copied</td>
+                                                    <td></td>
+                                                    <td>Not needed</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>startdate</td>
+                                                    <td>2018-01-01T12:00:00Z</td>
+                                                    <td>Current date</td>
+                                                    <td></td>
+                                                    <td>If left empty, current date will apply</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>enddate</td>
+                                                    <td>2018-01-01T12:00:00Z</td>
+                                                    <td>Current date +14 days</td>
+                                                    <td></td>
+                                                    <td>If left empty, current date +14 days will apply</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>categoryid</td>
+                                                    <td>123</td>
+                                                    <td>-999</td>
+                                                    <td>Target maps the Id number</td>
+                                                    <td>If left empty, the survey will not be categorized</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>copyanswers</td>
+                                                    <td>True/False</td>
+                                                    <td>False</td>
+                                                    <td></td>
+                                                    <td>Copy the survey with the answers</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>copylogic</td>
+                                                    <td>True/False</td>
+                                                    <td>False</td>
+                                                    <td></td>
+                                                    <td>When using, make sure that the logic is fully working</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>copysendouts</td>
+                                                    <td>123,1234,12345</td>
+                                                    <td>Empty</td>
+                                                    <td>One or more Ids of sendouts, separated by comma sign(,)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>active</td>
+                                                    <td>Ture/False</td>
+                                                    <td>Same as the survey that is copied</td>
+                                                    <td></td>
+                                                    <td>The feature is mainly used for the ordering page</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-CopySurvey" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-CopySurvey" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#info-resp-CopySurvey" aria-controls="profile" role="tab" data-toggle="tab">Information</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-CopySurvey">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/CopySurvey.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-CopySurvey">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="info-resp-CopySurvey">
+                                    The Survey will not be copied successfully if one or more of the conditions below are true:
+                                    <ul>
+                                        <li>Sendout Id(s) is(are) not valid for the survey that is beeing copied.</li>
+                                        <li>Category Id does not exist.</li>
+                                        <li>Logic is broken, pointing to questions or pages that are not in the survey.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END CopySurvey -->
+
                 </section>
                 <!-- END Surveys -->
 
@@ -493,6 +647,133 @@
                     <!-- END ListAnswerSets -->
 
                     <hr />
+
+                    <!-- ListAnswerSets with answers -->
+                    <section id="sec-ListAnswerSetsWithAnswers">
+                        <h4 id="ssec-ListAnswerSetsWithAnswers">Listing AnswerSets with answers</h4>
+                        <p>Lists all AnswerSets with answers in a survey.</p>
+
+                        <br />
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-ListAnswerSetsWithAnswers" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-ListAnswerSetsWithAnswers" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-ListAnswerSetsWithAnswers">
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /surveys/&lt;surveyId&gt;/answersWithData&#91;?page=&lt;Integer&gt;&pagesize=&lt;Integer&gt;&from=&lt;ISO8601Date&gt;&to=&lt;ISO8601Date&gt;&updated=&lt;ISO8601Date&gt;&completed=&lt;Boolean&gt;&#93;</code></pre>
+                                </div>
+                                
+                                <div role="tabpanel" class="tab-pane" id="desc-req-ListAnswerSetsWithAnswers">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Value type</th>
+                                                    <th>Example</th>
+                                                    <th>Default value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Unique identifier</td>
+                                                    <td>12345</td>
+                                                    <td>Mandatory, no default value</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>page</td>
+                                                    <td>Number</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>pagesize</td>
+                                                    <td>Number</td>
+                                                    <td>10</td>
+                                                    <td>100</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>from</td>
+                                                    <td><a href="types.html#ntg-type-iso8601">ISO8601 date</a></td>
+                                                    <td>2012-02-09T12:22:09Z</td>
+                                                    <td>Empty</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>to</td>
+                                                    <td><a href="types.html#ntg-type-iso8601">ISO8601 date</a></td>
+                                                    <td>2012-02-09T12:22:09Z</td>
+                                                    <td>Empty</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>updated</td>
+                                                    <td><a href="types.html#ntg-type-iso8601">ISO8601 date</a></td>
+                                                    <td>2012-02-09T12:22:09Z</td>
+                                                    <td>Empty</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>completed</td>
+                                                    <td>Boolean</td>
+                                                    <td>True/False</td>
+                                                    <td>False</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-ListAnswerSetsWithAnswers" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-ListAnswerSetsWithAnswers" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#info-resp-ListAnswerSetsWithAnswers" aria-controls="profile" role="tab" data-toggle="tab">Information</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-ListAnswerSetsWithAnswers">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/ListAnswerSetsWithAnswers.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-ListAnswerSetsWithAnswers">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="info-resp-ListAnswerSetsWithAnswers">
+                                    Keep the following in mind when using this functionality:
+                                    <ul>
+                                        <li>If <b>from</b> and <b>to</b> are set, <b>updated</b> cannot have a value.</li>
+                                        <li>If <b>updated</b> is set, <b>from</b> and <b>to</b> cannot have values.</li>
+                                        <li>The date in <b>from</b> cannot be after the date in <b>to</b>.</li>
+                                        <li>All the dates are compared to the date when the survey was created.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END ListAnswerSetsWithAnswers -->
+
+                    <hr/>
 
                     <!-- GetAnswerSet -->
                     <section id="sec-GetAnswerSet">
@@ -1158,6 +1439,92 @@
                     <!-- END ActivateSendout -->
 
                     <hr />
+
+                    <!-- DeactivateSendout -->
+                    <section id="sec-DeactivateSendout">
+                        <h4 id="ssec-DeactivateSendout">Deactivating a Sendout</h4>
+                        <p>Once you have activated a Sendout, you can deactivate it through the API.</p>
+
+                        <br />
+
+                        <!-- Request -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#req-DeactivateSendout" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-req-DeactivateSendout" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="req-DeactivateSendout">
+                                    <pre class="line-numbers"><code class="ntg-http-request">POST /surveys/&lt;surveyId&gt;/sendouts/&lt;sendoutId&gt;/deactivate</code></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-req-DeactivateSendout">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th>Type</th>
+                                                    <th>Optionality</th>
+                                                    <th>Remark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>surveyId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SurveyId of requested Survey.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>sendoutId</td>
+                                                    <td>Integer</td>
+                                                    <td class="req-parameter-mandatory">Mandatory</td>
+                                                    <td>SendoutId of Sendout you wish to deactivate.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="tabs tabs-text">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#resp-DeactivateSendout" aria-controls="home" role="tab" data-toggle="tab">Response</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#desc-resp-DeactivateSendout" aria-controls="profile" role="tab" data-toggle="tab">Description</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active in" id="resp-DeactivateSendout">
+                                    <pre class="line-numbers" data-src="../assets/samples/json/reqresp/DeactivateSendout.response.json"></pre>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="desc-resp-DeactivateSendout">
+                                    <pre class="line-numbers"><code>No description.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END DeactivateSendout -->
+
+                    <hr/>
 
                     <!-- ListRespondents -->
                     <section id="sec-ListRespondents">
@@ -2464,7 +2831,7 @@
 							<!-- Tab panes -->
 							<div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="req-ListBGDocument">
-                                    <pre class="line-numbers"><code class="ntg-http-request">GET /bgdata/bgdocument/&lt;bgDocumentId&gt;</code></pre>
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /bgdata/bgdocuments/&lt;bgDocumentId&gt;</code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-req-ListBGDocument">
@@ -2546,7 +2913,7 @@
 							
 							<div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active in" id="req-ListBGLabels">
-                                    <pre class="line-numbers"><code class="ntg-http-request">GET /bgdata/bgdocument/&lt;bgDocumentId&gt;/labels</code></pre>
+                                    <pre class="line-numbers"><code class="ntg-http-request">GET /bgdata/bgdocuments/&lt;bgDocumentId&gt;/labels</code></pre>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="desc-req-ListBGLabels">
